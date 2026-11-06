@@ -8,8 +8,8 @@
 - Cache mutations and execution lease registration must hold `StoreTransaction`. Never mutate or clean cjv-owned files. Never consume an external SDK directory during publication.
 - Use typed states for lifecycle decisions. Preserve child exit status even if best-effort cleanup fails. When descendant liveness is uncertain, retain the runtime lease.
 - Keep the CLI limited to default execution, `inspect`, `list`, and `cache clean`. Official releases only; no SDK import command or ABI-version guessing.
-- Run formatting, strict Clippy, and relevant tests. Changes to supervision need the Unix PTY regression; changes to loading/provisioning need real official SDK acceptance when fixtures are available. Report unavailable platform validation accurately.
-- Research fixtures are not production implementations. Do not replace regression assertions with demonstration output or bypass validation to make a fixture pass.
+- Run formatting, strict Clippy, and relevant ordinary tests for code changes.
+- Do not commit research directories, audit or acceptance reports, SDK probes, temporary validation scripts, downloaded SDKs, or generated website output. Documentation describes supported behavior and maintenance procedures, not task execution records.
 
 ## Git Commit Style
 

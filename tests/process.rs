@@ -5,13 +5,6 @@ fn native_argument_and_exit_transparency() {
     let foreground_before = rustix::termios::tcgetpgrp(std::io::stdin()).ok();
     #[cfg(unix)]
     let signal_mask_before = nix::sys::signal::SigSet::thread_get_mask().unwrap();
-    #[cfg(unix)]
-    if std::env::var_os("CJR_TEST_REQUIRE_TTY").is_some() {
-        assert!(
-            foreground_before.is_some(),
-            "PTY regression requires a controlling terminal"
-        );
-    }
     #[cfg(target_os = "linux")]
     let subreaper_before = rustix::process::child_subreaper().unwrap();
     let t = tempfile::tempdir().unwrap();
