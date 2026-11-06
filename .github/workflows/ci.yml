@@ -55,5 +55,5 @@ jobs:
           echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
       - run: npm ci --no-audit --no-fund
         working-directory: web
-      - run: npm run build
+      - run: npm test
         working-directory: web

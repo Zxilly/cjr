@@ -1,8 +1,10 @@
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
-import { copyFile, mkdir } from 'node:fs/promises';
+import { copyFile, mkdir, readFile } from 'node:fs/promises';
 import { build } from 'vite';
+import { parse } from 'smol-toml';
+import { buildLandingLocales, buildBookNavigation } from './build-locales.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const web = fileURLToPath(new URL('./', import.meta.url));
@@ -12,6 +14,8 @@ if (!base.startsWith('/') || !base.endsWith('/') || base.includes('..')) {
 }
 
 await build({ root: web, configFile: resolve(web, 'vite.config.js'), logLevel: 'warn' });
+const version = parse(await readFile(resolve(root, 'Cargo.toml'), 'utf8')).package.version;
+await buildLandingLocales(resolve(root, 'dist'), base, version);
 
 await mkdir(resolve(root, 'dist/licenses'), { recursive: true });
 for (const font of ['@fontsource/patua-one', '@fontsource-variable/jetbrains-mono', '@fontsource-variable/noto-sans-sc']) {
@@ -40,5 +44,6 @@ for (const [book, languages] of Object.entries(books)) {
     });
     if (result.error) throw result.error;
     if (result.status !== 0) process.exit(result.status ?? 1);
+    await buildBookNavigation(resolve(root, 'dist'), base, book, language);
   }
 }

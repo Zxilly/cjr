@@ -1,11 +1,40 @@
 # 安装与运行
 
+## 下载预编译版本
+
+从 [GitHub Releases](https://github.com/Zxilly/cjr/releases/latest) 下载与你的系统和架构对应的归档，无需安装 Rust。
+
+| 系统 | v0.0.1 下载 |
+| --- | --- |
+| Windows x64 | [ZIP](https://github.com/Zxilly/cjr/releases/download/v0.0.1/cjr-v0.0.1-x86_64-pc-windows-msvc.zip) |
+| Linux x64 | [tar.gz](https://github.com/Zxilly/cjr/releases/download/v0.0.1/cjr-v0.0.1-x86_64-unknown-linux-musl.tar.gz) |
+| macOS Apple Silicon | [tar.gz](https://github.com/Zxilly/cjr/releases/download/v0.0.1/cjr-v0.0.1-aarch64-apple-darwin.tar.gz) |
+| macOS Intel | [tar.gz](https://github.com/Zxilly/cjr/releases/download/v0.0.1/cjr-v0.0.1-x86_64-apple-darwin.tar.gz) |
+
+Release 同时提供每个归档的 `.sha256` 文件。Linux 使用 `sha256sum -c <文件名>.sha256`，macOS 使用 `shasum -a 256 -c <文件名>.sha256` 校验。Windows 使用 `Get-FileHash <归档路径> -Algorithm SHA256`，将结果与校验文件中的摘要比较。
+
+解压后，将 `cjr`（Windows 为 `cjr.exe`）所在目录加入 `PATH`。Linux / macOS 也可以将程序放入已有的用户命令目录：
+
+```sh
+mkdir -p ~/.local/bin
+install -m 755 cjr ~/.local/bin/cjr
+```
+
+确认 `~/.local/bin` 已在 `PATH` 中。Windows 可将 `cjr.exe` 放到固定目录，再通过“环境变量”设置将该目录加入用户 `Path`。重新打开终端，运行：
+
+```sh
+cjr --version
+# cjr 0.0.1
+```
+
+macOS 预编译版本要求 macOS 13 或更新版本。Linux 版本使用 musl 静态链接；目标仓颉程序及其运行库的系统要求仍需满足。
+
 ## 从源码安装
 
 需要 Rust 1.89 或更新版本、C 编译器和 CMake。Windows 使用 MSVC 工具链。
 
 ```sh
-cargo install --git https://github.com/Zxilly/cjr --locked
+cargo install --git https://github.com/Zxilly/cjr --tag v0.0.1 --locked
 ```
 
 Cargo 将程序安装到其 `bin` 目录。确认该目录在 `PATH` 中，然后检查安装：

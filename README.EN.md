@@ -12,10 +12,14 @@ cjr ./app --port 8080
 
 ## Install
 
+Download the archive for your platform from [GitHub Releases](https://github.com/Zxilly/cjr/releases/latest), extract it and add `cjr` to `PATH`. Prebuilt binaries are available for Windows x64, Linux x64 and macOS ARM64/x64. Each archive includes a SHA-256 checksum alongside it.
+
+To build from source:
+
 Requires Rust 1.89+, a C compiler and CMake. Use MSVC on Windows.
 
 ```sh
-cargo install --git https://github.com/Zxilly/cjr --locked
+cargo install --git https://github.com/Zxilly/cjr --tag v0.0.1 --locked
 ```
 
 See [Install and run](docs/user-guide/en/installation.md) for installation and PATH details.

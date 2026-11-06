@@ -12,10 +12,14 @@ cjr ./app --port 8080
 
 ## 安装
 
+从 [GitHub Releases](https://github.com/Zxilly/cjr/releases/latest) 下载对应平台的归档，解压后将 `cjr` 所在目录加入 `PATH`。提供 Windows x64、Linux x64 和 macOS ARM64/x64 版本，以及各归档的 SHA-256 校验文件。
+
+也可以从源码安装：
+
 需要 Rust 1.89+、C 编译器和 CMake；Windows 使用 MSVC 工具链。
 
 ```sh
-cargo install --git https://github.com/Zxilly/cjr --locked
+cargo install --git https://github.com/Zxilly/cjr --tag v0.0.1 --locked
 ```
 
 安装步骤和 PATH 配置见[安装与运行](docs/user-guide/src/installation.md)。

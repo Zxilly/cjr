@@ -33,6 +33,8 @@ npm run preview
 ```text
 dist/
   index.html
+  zh-CN/index.html
+  en/index.html
   assets/
   book/user-guide/zh-CN/
   book/user-guide/en/
@@ -45,3 +47,13 @@ dist/
 部署时将整个 `dist/` 交给静态站点服务。构建不会自行发布或配置域名。不要提交 `node_modules/`、`dist/` 或 mdBook 的 `book/` 输出。
 
 修改文档时同步更新两种语言和各自的 `SUMMARY.md`。安装说明应指向可用的安装方式，不为尚未发布的安装脚本或二进制提供下载按钮。
+
+## 语言与版本
+
+首页文案位于 `web/src/locales/zh-CN.json` 和 `en.json`，由 i18next 处理。显式语言 URL 优先，其次是旧链接的 `?lang=`、已保存的选择和浏览器语言。不支持的语言回退到英文。
+
+构建时生成 `/zh-CN/` 和 `/en/` 的完整 HTML，下载和文档链接不依赖 JavaScript。页面标题、搜索摘要、无障碍标签和复制提示均使用翻译资源。下载版本从 `Cargo.toml` 读取，与二进制保持一致。
+
+两种语言的文档使用相同章节文件名。构建过程为每章添加语言链接，切换时保留章节、移除无法跨语言对应的标题锚点；首页链接保持所选语言。中文文档工具栏翻译位于 `web/src/locales/book-zh-CN.json`。
+
+`npm test` 构建站点并验证语言页面、下载链接和章节切换。新增文案必须同时补齐两种语言，缺少翻译键会使构建失败。可以用 `SITE_BASE=/cjr/ npm test` 验证子路径部署。

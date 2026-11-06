@@ -3,43 +3,32 @@ import '@fontsource-variable/jetbrains-mono';
 import '@fontsource-variable/noto-sans-sc';
 import './style.css';
 
-const english = {
-  skip: 'Skip to content', navigation: 'Site navigation', language: 'Language',
-  headline: 'Run Cangjie programs.',
-  intro: 'Start your Cangjie program with one command. Skip the search for runtimes and the manual setup.',
-  quickstart: 'Get started', steps: 'Getting started steps',
-  install: 'Install cjr', run: 'Run a program', manage: 'Inspect & clean',
-  installTitle: 'Install from source', requirements: 'Requires Rust 1.89+, a C compiler and CMake.',
-  copyInstall: 'Copy installation command', installDocs: 'Installation guide →',
-  runTitle: 'Start with a program path', runHint: 'Arguments after the path go directly to your application.',
-  copyRun: 'Copy launch command',
-  offline: 'Once cached, run offline with cjr --offline ./app. On Windows, use a path such as .\\app.exe.',
-  manageTitle: 'See versions and local content', inspectHint: 'Inspect version and dependencies',
-  listHint: 'List local content', cleanHint: 'Preview cache cleanup', commandsDocs: 'Command reference →',
-  docs: 'Documentation', userGuide: 'User guide', userGuideHint: 'Installation, commands, cache and troubleshooting',
-  devGuide: 'Developer guide', devGuideHint: 'Build from source and contribute',
-  scope: 'Supported platforms and limitations →',
-  issues: 'Report an issue', cangjie: 'Cangjie',
-};
-const language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'zh-CN';
-if (language === 'en') {
-  document.documentElement.lang = 'en';
-  document.title = 'cjr — Run Cangjie programs';
-  document.querySelector('meta[name="description"]').content = english.intro;
-  for (const element of document.querySelectorAll('[data-text]')) {
-    element.textContent = english[element.dataset.text];
-  }
-  for (const element of document.querySelectorAll('[data-label]')) {
-    element.setAttribute('aria-label', english[element.dataset.label]);
-  }
+import i18n from './i18n.js';
+
+const language = i18n.resolvedLanguage;
+const t = key => i18n.t(key, { version: __CJR_VERSION__ });
+document.documentElement.lang = language;
+document.title = t('title');
+document.querySelector('meta[name="description"]').content = t('description');
+for (const element of document.querySelectorAll('[data-text]')) {
+  element.textContent = t(element.dataset.text);
+}
+for (const element of document.querySelectorAll('[data-label]')) {
+  element.setAttribute('aria-label', t(element.dataset.label));
 }
 for (const link of document.querySelectorAll('[data-language]')) {
+  link.href = `${import.meta.env.BASE_URL}${link.dataset.language}/`;
   if (link.dataset.language === language) link.setAttribute('aria-current', 'true');
   else link.removeAttribute('aria-current');
 }
 for (const link of document.querySelectorAll('[data-book]')) {
   link.href = `${import.meta.env.BASE_URL}book/${link.dataset.book}/${language}/${link.dataset.page}`;
 }
+for (const link of document.querySelectorAll('[data-asset]')) {
+  link.href = `https://github.com/Zxilly/cjr/releases/download/v${__CJR_VERSION__}/cjr-v${__CJR_VERSION__}-${link.dataset.asset}`;
+}
+document.querySelector('[data-release]').href = `https://github.com/Zxilly/cjr/releases/tag/v${__CJR_VERSION__}`;
+document.getElementById('install-command').textContent = `cargo install --git https://github.com/Zxilly/cjr --tag v${__CJR_VERSION__} --locked`;
 
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 function selectTab(selected) {
@@ -71,11 +60,9 @@ for (const button of document.querySelectorAll('[data-copy]')) {
     clearTimeout(statusTimer);
     try {
       await navigator.clipboard.writeText(document.getElementById(button.dataset.copy).textContent);
-      status.textContent = language === 'en' ? 'Command copied' : '命令已复制';
+      status.textContent = t('copied');
     } catch {
-      status.textContent = language === 'en'
-        ? 'Copy unavailable. Select the command and copy it manually.'
-        : '无法访问剪贴板，请选中命令后手动复制。';
+      status.textContent = t('copyFailed');
     }
     statusTimer = setTimeout(() => { status.textContent = ''; }, 5000);
   });

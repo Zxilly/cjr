@@ -4,3 +4,5 @@
 - [Build and test](building.md)
 - [Architecture](architecture.md)
 - [Documentation and website](website.md)
+
+- [Releasing](releases.md)

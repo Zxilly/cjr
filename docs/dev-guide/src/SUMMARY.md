@@ -4,3 +4,5 @@
 - [构建与测试](building.md)
 - [架构](architecture.md)
 - [文档与网站](website.md)
+
+- [发布版本](releases.md)

@@ -14,9 +14,9 @@
       <nav class="topbar" aria-label="网站导航" data-label="navigation">
         <a href="https://github.com/Zxilly/cjr" class="repo-link">Zxilly / cjr <span aria-hidden="true">↗</span></a>
         <div class="languages" aria-label="语言" data-label="language">
-          <a href="?lang=zh-CN" lang="zh-CN" data-language="zh-CN" aria-current="true">中文</a>
+          <a href="%BASE_URL%zh-CN/" lang="zh-CN" hreflang="zh-CN" data-language="zh-CN" aria-current="true">中文</a>
           <span aria-hidden="true">/</span>
-          <a href="?lang=en" lang="en" data-language="en">English</a>
+          <a href="%BASE_URL%en/" lang="en" hreflang="en" data-language="en">English</a>
         </div>
       </nav>
 
@@ -36,9 +36,20 @@
             <button type="button" id="tab-cache" role="tab" aria-selected="false" aria-controls="panel-cache" tabindex="-1" data-tab="cache" data-text="manage">查看与清理</button>
           </div>
           <div id="panel-install" class="panel" role="tabpanel" aria-labelledby="tab-install" tabindex="0">
-            <h2 data-text="installTitle">从源码安装</h2>
-            <p data-text="requirements">需要 Rust 1.89+、C 编译器和 CMake。</p>
-            <div class="codeblock"><code id="install-command">cargo install --git https://github.com/Zxilly/cjr --locked</code><button type="button" class="copy" data-copy="install-command" aria-label="复制安装命令" data-label="copyInstall"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></button></div>
+            <h2 data-text="installTitle">下载 cjr</h2>
+            <p data-text="requirements">选择系统版本，解压后将 cjr 放入 PATH。无需安装 Rust。</p>
+            <div class="downloads" aria-label="下载预编译版本" data-label="downloads">
+              <a data-asset="x86_64-pc-windows-msvc.zip" data-text="windows">Windows x64</a>
+              <a data-asset="x86_64-unknown-linux-musl.tar.gz" data-text="linux">Linux x64</a>
+              <a data-asset="aarch64-apple-darwin.tar.gz" data-text="macArm">macOS Apple Silicon</a>
+              <a data-asset="x86_64-apple-darwin.tar.gz" data-text="macIntel">macOS Intel</a>
+            </div>
+            <a class="text-link" data-release data-text="releaseNotes">更新说明与 SHA-256 →</a>
+            <details class="source-install">
+              <summary data-text="sourceInstall">从源码安装</summary>
+              <p class="note" data-text="sourceRequirements">需要 Rust 1.89+、C 编译器和 CMake。</p>
+              <div class="codeblock"><code id="install-command"></code><button type="button" class="copy" data-copy="install-command" aria-label="复制安装命令" data-label="copyInstall"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></button></div>
+            </details>
             <a class="text-link" data-book="user-guide" data-page="installation.html" href="%BASE_URL%book/user-guide/zh-CN/installation.html" data-text="installDocs">查看安装说明 →</a>
           </div>
           <div id="panel-run" class="panel" role="tabpanel" aria-labelledby="tab-run" tabindex="0" hidden>
@@ -66,7 +77,7 @@
       </main>
       <footer><a href="https://github.com/Zxilly/cjr">GitHub</a><a href="https://github.com/Zxilly/cjr/issues" data-text="issues">问题反馈</a><a href="https://cjv.zxilly.com">cjv</a><a href="https://cangjie-lang.cn/" data-text="cangjie">仓颉官网</a></footer>
       <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
-      <noscript><p class="note">JavaScript 未启用，安装命令和文档链接仍可使用。 / Installation and documentation links work without JavaScript.</p></noscript>
+      <noscript><p class="note" data-text="noScript">JavaScript 未启用，下载和文档链接仍可使用。</p></noscript>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

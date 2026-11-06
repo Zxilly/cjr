@@ -1,0 +1,8 @@
+.book-languages { display: inline-flex; align-items: center; gap: 14px; margin-right: 12px; font-size: 14px; }
+.book-languages a { display: inline !important; width: auto !important; color: var(--icons) !important; }
+.book-languages a[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.book-languages a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (max-width: 600px) {
+  .book-languages { gap: 10px; margin-right: 4px; font-size: 12px; }
+  .menu-title { display: none; }
+}
