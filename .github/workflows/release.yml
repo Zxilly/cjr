@@ -1,0 +1,98 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Match stable tag to embedded package version
+        run: |
+          python3 - <<'PY'
+          import os, re, tomllib
+          with open('Cargo.toml', 'rb') as manifest:
+              version = tomllib.load(manifest)['package']['version']
+          tag = os.environ['GITHUB_REF_NAME']
+          if not re.fullmatch(r'v\d+\.\d+\.\d+', tag) or tag != f'v{version}':
+              raise SystemExit(f'Tag {tag} does not match stable package version {version}')
+          PY
+  checks:
+    needs: version
+    uses: ./.github/workflows/ci.yml
+  draft:
+    needs: checks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: softprops/action-gh-release@8a0cd651e5b2365bd640854a3fa5dfc70e4875f3 # v3.0.4
+        with:
+          draft: true
+          generate_release_notes: true
+          name: cjr ${{ github.ref_name }}
+  binaries:
+    needs: draft
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            target: x86_64-pc-windows-msvc
+            extension: .exe
+          - os: ubuntu-latest
+            target: x86_64-unknown-linux-musl
+            extension: ''
+          - os: macos-latest
+            target: aarch64-apple-darwin
+            extension: ''
+          - os: macos-26-intel
+            target: x86_64-apple-darwin
+            extension: ''
+    runs-on: ${{ matrix.os }}
+    env:
+      MACOSX_DEPLOYMENT_TARGET: '13.0'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # master
+        with:
+          toolchain: stable
+          targets: ${{ matrix.target }}
+      - name: Install musl toolchain
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install --yes musl-tools
+      - name: Build and upload archive and checksum
+        uses: taiki-e/upload-rust-binary-action@f0d45ae91ee7b8ee928de7a9d04d893a08bcbec6 # v1.30.2
+        with:
+          bin: cjr
+          target: ${{ matrix.target }}
+          build-tool: cargo
+          archive: $bin-$tag-$target
+          locked: true
+          checksum: sha256
+          include: README.md,README.EN.md
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check embedded version in release binary
+        shell: bash
+        env:
+          BINARY: target/${{ matrix.target }}/release/cjr${{ matrix.extension }}
+        run: test "$("$BINARY" --version)" = "cjr ${GITHUB_REF_NAME#v}"
+  publish:
+    needs: binaries
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: softprops/action-gh-release@8a0cd651e5b2365bd640854a3fa5dfc70e4875f3 # v3.0.4
+        with:
+          draft: false
+          make_latest: 'true'

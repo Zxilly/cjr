@@ -73,6 +73,22 @@ fn command_scope() {
 }
 
 #[test]
+fn embedded_version_matches_package_without_creating_cache() {
+    let t = tempfile::tempdir().unwrap();
+    for flag in ["--version", "-V"] {
+        let output = cmd(t.path()).arg(flag).output().unwrap();
+        assert!(output.status.success());
+        assert_eq!(
+            String::from_utf8(output.stdout).unwrap().trim(),
+            concat!("cjr ", env!("CARGO_PKG_VERSION"))
+        );
+        assert!(output.stderr.is_empty());
+    }
+    assert!(!t.path().join("cjr").exists());
+    assert!(!t.path().join("cjv").exists());
+}
+
+#[test]
 fn cjv_settings_precedence_and_invalid_environment() {
     let t = tempfile::tempdir().unwrap();
     let managed = t.path().join("managed");
