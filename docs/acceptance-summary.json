@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-07",
+  "matrices": {
+    "win32-x64": {
+      "matrix": {
+        "passed": 23,
+        "total": 23,
+        "checks": [
+          {
+            "name": "1.0.5/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.0.5/dynamic-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/dynamic-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.0.5/stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/dynamic-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/dynamic-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/dynamic-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/dynamic-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "default clean",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "receipt-only offline",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "list",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "DLL shadow rejection",
+            "exit": 1,
+            "passed": true
+          },
+          {
+            "name": "dry-run all",
+            "exit": 0,
+            "passed": true
+          }
+        ]
+      },
+      "edges": {
+        "passed": 9,
+        "total": 9,
+        "checks": [
+          {
+            "name": "managed installation snapshot",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "compile argv fixture",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "argument boundary / exit status",
+            "exit": 37,
+            "passed": true
+          },
+          {
+            "name": "clean while in use",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "wait/exit status",
+            "exit": 37,
+            "passed": true
+          },
+          {
+            "name": "clean after exit",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "same SDK dynamic library 1.0.5",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "same SDK dynamic library 1.1.3",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "same SDK dynamic library 1.2.0",
+            "exit": 0,
+            "passed": true
+          }
+        ]
+      },
+      "cache_paths": {
+        "passed": 5,
+        "total": 5,
+        "checks": [
+          {
+            "name": "concurrent publication 0",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "concurrent publication 1",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "corrupt runtime rejected",
+            "exit": 1,
+            "passed": true
+          },
+          {
+            "name": "corrupt inactive cache clean",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "offline miss after clean",
+            "exit": 1,
+            "passed": true
+          }
+        ]
+      },
+      "go_rust_lock_protocol": {
+        "passed": 2,
+        "total": 2,
+        "checks": [
+          {
+            "name": "Go-held cjv locks reject snapshot",
+            "exit": 1,
+            "seconds": 2.079,
+            "passed": true
+          },
+          {
+            "name": "snapshot after Go lock release",
+            "exit": 0,
+            "passed": true
+          }
+        ]
+      }
+    },
+    "linux-x64": {
+      "matrix": {
+        "passed": 34,
+        "total": 34,
+        "checks": [
+          {
+            "name": "1.0.5/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.0.5/dy-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/dy-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.0.5/static",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/static",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.0.5/default-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/default-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.0.5/dy-std-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.0.5/dy-std-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/dy-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/dy-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/static",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/static",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/default-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/default-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.1.3/dy-std-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.1.3/dy-std-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/default",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/dy-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/dy-std",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/static",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/static",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/default-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/default-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "1.2.0/dy-std-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "inspect/1.2.0/dy-std-stripped",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "default clean",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "receipt-only offline",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "list",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "dry-run all",
+            "exit": 0,
+            "passed": true
+          }
+        ]
+      },
+      "edges": {
+        "passed": 10,
+        "total": 10,
+        "checks": [
+          {
+            "name": "managed installation snapshot",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "compile argv fixture",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "argument boundary / exit status",
+            "exit": 37,
+            "passed": true
+          },
+          {
+            "name": "clean while in use",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "forward parent SIGTERM",
+            "exit": -15,
+            "passed": true
+          },
+          {
+            "name": "clean after exit",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "same SDK dynamic library 1.0.5",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "same SDK dynamic library 1.1.3",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "same SDK dynamic library 1.2.0",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "old-rpath",
+            "exit": 1,
+            "passed": true
+          }
+        ]
+      },
+      "cache_paths": {
+        "passed": 5,
+        "total": 5,
+        "checks": [
+          {
+            "name": "concurrent publication 0",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "concurrent publication 1",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "corrupt runtime rejected",
+            "exit": 1,
+            "passed": true
+          },
+          {
+            "name": "corrupt inactive cache clean",
+            "exit": 0,
+            "passed": true
+          },
+          {
+            "name": "offline miss after clean",
+            "exit": 1,
+            "passed": true
+          }
+        ]
+      },
+      "go_rust_lock_protocol": {
+        "passed": 2,
+        "total": 2,
+        "checks": [
+          {
+            "name": "Go-held cjv locks reject snapshot",
+            "exit": 1,
+            "seconds": 2.058,
+            "passed": true
+          },
+          {
+            "name": "snapshot after Go lock release",
+            "exit": 0,
+            "passed": true
+          }
+        ]
+      }
+    }
+  },
+  "macos_native_execution": "not run; no Mac host",
+  "cold_download": {
+    "platform": "linux-x64",
+    "version": "1.2.0",
+    "status": "passed",
+    "checks": [
+      "official catalog",
+      "official archive SHA-256",
+      "runtime-only extraction",
+      "workload execution"
+    ]
+  },
+  "macos_static": [
+    {
+      "exit": 0,
+      "version": "1.0.5",
+      "entries": 25,
+      "target": {
+        "arch": "aarch64",
+        "os": "macos"
+      },
+      "minimum_os": "12.0.0",
+      "hardened": false,
+      "diagnostics": []
+    },
+    {
+      "exit": 0,
+      "version": "1.0.5",
+      "entries": 1,
+      "target": {
+        "arch": "aarch64",
+        "os": "macos"
+      },
+      "minimum_os": "12.0.0",
+      "hardened": false,
+      "diagnostics": []
+    },
+    {
+      "exit": 0,
+      "version": "1.2.0",
+      "entries": 50,
+      "target": {
+        "arch": "aarch64",
+        "os": "macos"
+      },
+      "minimum_os": "12.0.0",
+      "hardened": false,
+      "diagnostics": []
+    },
+    {
+      "exit": 0,
+      "version": "1.2.0",
+      "entries": 1,
+      "target": {
+        "arch": "aarch64",
+        "os": "macos"
+      },
+      "minimum_os": "12.0.0",
+      "hardened": false,
+      "diagnostics": []
+    },
+    {
+      "exit": 0,
+      "version": "1.3.0-alpha.20261107001016",
+      "entries": 50,
+      "target": {
+        "arch": "x86_64",
+        "os": "macos"
+      },
+      "minimum_os": "12.0.0",
+      "hardened": false,
+      "diagnostics": []
+    },
+    {
+      "exit": 0,
+      "version": "1.3.0-alpha.20261107001016",
+      "entries": 1,
+      "target": {
+        "arch": "x86_64",
+        "os": "macos"
+      },
+      "minimum_os": "12.0.0",
+      "hardened": false,
+      "diagnostics": []
+    },
+    {
+      "exit": 0,
+      "version": "1.0.5",
+      "entries": 25
+    },
+    {
+      "exit": 0,
+      "version": "1.2.0",
+      "entries": 50
+    },
+    {
+      "exit": 0,
+      "version": "1.3.0-alpha.20261107001016",
+      "entries": 50
+    }
+  ],
+  "macos_archive_extraction": {
+    "versions": [
+      "1.0.5",
+      "1.2.0"
+    ],
+    "status": "passed on Linux",
+    "native_execution": false
+  },
+  "engineering_hardening": {
+    "date": "2026-11-07",
+    "windows_ordinary_tests": 27,
+    "linux_ordinary_tests": 29,
+    "http_failure_tests": 4,
+    "linux_macos_archive_regression": true,
+    "terminal_regression": "SIGTTOU restore failure reproduced; fixed with scoped thread signal mask",
+    "rust_msrv": "1.89.0 all-targets check on Linux",
+    "macos_native_execution": "pending"
+  }
+}

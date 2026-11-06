@@ -37,4 +37,3 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("{}", serde_json::to_string_pretty(&results?)?);
     Ok(())
 }
-

@@ -1,0 +1,167 @@
+{
+  "checked_date": "2026-11-07",
+  "source": "https://crates.io/api/v1/crates/{crate}",
+  "dependencies": [
+    {
+      "crate": "backon",
+      "pinned": "1.6.0",
+      "latest_stable": "1.6.0",
+      "matches_latest": true,
+      "resolved": "1.6.0"
+    },
+    {
+      "crate": "walkdir",
+      "pinned": "2.5.0",
+      "latest_stable": "2.5.0",
+      "matches_latest": true,
+      "resolved": "2.5.0"
+    },
+    {
+      "crate": "hex",
+      "pinned": "0.4.3",
+      "latest_stable": "0.4.3",
+      "matches_latest": true,
+      "resolved": "0.4.3"
+    },
+    {
+      "crate": "clap",
+      "pinned": "4.6.7",
+      "latest_stable": "4.6.7",
+      "matches_latest": true,
+      "resolved": "4.6.7"
+    },
+    {
+      "crate": "object",
+      "pinned": "0.40.0",
+      "latest_stable": "0.40.0",
+      "matches_latest": true,
+      "resolved": "0.40.0"
+    },
+    {
+      "crate": "serde",
+      "pinned": "1.0.229",
+      "latest_stable": "1.0.229",
+      "matches_latest": true,
+      "resolved": "1.0.229"
+    },
+    {
+      "crate": "serde_json",
+      "pinned": "1.0.154",
+      "latest_stable": "1.0.154",
+      "matches_latest": true,
+      "resolved": "1.0.154"
+    },
+    {
+      "crate": "toml",
+      "pinned": "1.2.1",
+      "latest_stable": "1.2.1+spec-1.1.0",
+      "matches_latest": true,
+      "resolved": "1.2.1+spec-1.1.0"
+    },
+    {
+      "crate": "reqwest",
+      "pinned": "0.13.5",
+      "latest_stable": "0.13.5",
+      "matches_latest": true,
+      "resolved": "0.13.5"
+    },
+    {
+      "crate": "zip",
+      "pinned": "9.4.1",
+      "latest_stable": "9.4.1",
+      "matches_latest": true,
+      "resolved": "9.4.1"
+    },
+    {
+      "crate": "tar",
+      "pinned": "0.4.46",
+      "latest_stable": "0.4.46",
+      "matches_latest": true,
+      "resolved": "0.4.46"
+    },
+    {
+      "crate": "flate2",
+      "pinned": "1.1.11",
+      "latest_stable": "1.1.11",
+      "matches_latest": true,
+      "resolved": "1.1.11"
+    },
+    {
+      "crate": "sha2",
+      "pinned": "0.11.1",
+      "latest_stable": "0.11.1",
+      "matches_latest": true,
+      "resolved": "0.11.1"
+    },
+    {
+      "crate": "tempfile",
+      "pinned": "3.27.0",
+      "latest_stable": "3.27.0",
+      "matches_latest": true,
+      "resolved": "3.27.0"
+    },
+    {
+      "crate": "thiserror",
+      "pinned": "2.0.21",
+      "latest_stable": "2.0.21",
+      "matches_latest": true,
+      "resolved": "2.0.21"
+    },
+    {
+      "crate": "mockito",
+      "pinned": "1.7.2",
+      "latest_stable": "1.7.2",
+      "matches_latest": true,
+      "resolved": "1.7.2"
+    },
+    {
+      "crate": "proptest",
+      "pinned": "1.12.0",
+      "latest_stable": "1.12.0",
+      "matches_latest": true,
+      "resolved": "1.12.0"
+    },
+    {
+      "crate": "windows-sys",
+      "pinned": "0.61.2",
+      "latest_stable": "0.61.2",
+      "matches_latest": true,
+      "resolved": "0.61.2"
+    },
+    {
+      "crate": "libc",
+      "pinned": "0.2.191",
+      "latest_stable": "0.2.191",
+      "matches_latest": true,
+      "resolved": "0.2.191"
+    },
+    {
+      "crate": "rustix",
+      "pinned": "1.1.6",
+      "latest_stable": "1.1.6",
+      "matches_latest": true,
+      "resolved": "1.1.6"
+    },
+    {
+      "crate": "signal-hook",
+      "pinned": "0.4.6",
+      "latest_stable": "0.4.6",
+      "matches_latest": true,
+      "resolved": "0.4.6"
+    },
+    {
+      "crate": "nix",
+      "pinned": "0.31.3",
+      "latest_stable": "0.31.3",
+      "resolved": "0.31.3",
+      "matches_latest": true
+    },
+    {
+      "crate": "scopeguard",
+      "pinned": "1.2.0",
+      "latest_stable": "1.2.0",
+      "resolved": "1.2.0",
+      "matches_latest": true
+    }
+  ]
+}
