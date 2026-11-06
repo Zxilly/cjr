@@ -37,6 +37,7 @@
 | 两平台缓存故障与并发 | 各 5/5；损坏 cjv 归档回退到 cjr 归档、并发准备、损坏 runtime 拒绝、清理和离线缺失 |
 | 两平台 Go/Rust 锁协议 | 各 2/2；Go 持锁时约 2 秒超时回退，释放后快照成功 |
 | Linux 全新缓存网络路径 | 官方 1.2.0 清单/SDK 下载、摘要校验、runtime 提取、真实 workload 启动成功 |
+| CI SDK 脚本本地验收 | Windows/Linux 各 26/26；SDK 1.0.5/1.2.0 的编译、inspect、离线执行和缓存操作 |
 | macOS 解析器 | 9 个真实 SDK 产物正确识别；普通及 fat fixture 测试通过 |
 | macOS SDK 解包 | Linux 上通过 1.0.5/1.2.0 两份官方归档摘要、选择性提取与 PCRE2 两级 symlink 验收 |
 
@@ -44,7 +45,7 @@ Windows/Linux 的 `cargo fmt`、严格 Clippy、单元/集成测试和 release �
 
 ## 已知限制与待验收
 
-1. macOS 三个官方 SDK 产物的 9 个 cjpm/std-core/strip 样本，已由 Rust 解析器正确提取版本、架构和最低系统版本；fat slice 使用构造 fixture 测试。未在 Mac 原生执行。CI 中已加入 ARM64 原生 SDK 验收与 Intel 编译测试，结果见仓库的 CI 运行记录。
+1. macOS 三个官方 SDK 产物的 9 个 cjpm/std-core/strip 样本，已由 Rust 解析器正确提取版本、架构和最低系统版本；fat slice 使用构造 fixture 测试。本地环境没有 Mac。CI 包含 ARM64 原生 SDK 验收与 Intel 编译、测试和终端回归，结果见仓库的 [CI 运行记录](https://github.com/Zxilly/cjr/actions/workflows/ci.yml)。
 2. macOS 当前对 hardened/library-validation/restricted 程序保守拒绝注入，不解析 entitlement 以放宽权限。普通 CLI 路径已实现。无法证明派生进程全部退出时，租约保留至同一主机下一次启动。
 3. Windows 本机 1.2.0 Cangjie `main(args)` 收到中文参数时抛出 `IllegalArgumentException: Invalid unicode scalar value`，直接启动和通过 cjr 的结果相同。cjr 的 Windows 原生 Rust 子进程测试验证中文、空格、引号、反斜杠和字面 `--` 正确透传；不修改用户程序来规避 SDK 的参数解码行为。
 4. ELF 解析要求可用 section headers，SDK version 使用已验证的普通指针/RELATIVE relocation；未知布局返回诊断，不扫描任意字符串猜版本。Mach-O 尚未验证 metadata 指针中的 chained fixups。
