@@ -27,7 +27,7 @@ cjr --version
 # cjr 0.0.1
 ```
 
-The macOS binaries require macOS 13 or newer. The Linux binary is statically linked with musl; the Cangjie application and its runtime still have their own system requirements.
+Windows binaries include the C/C++ runtime and do not require a separate Visual C++ Redistributable installation. The macOS binaries require macOS 13 or newer. The Linux binary is statically linked with musl; the Cangjie application and its runtime still have their own system requirements.
 
 ## Install from source
 

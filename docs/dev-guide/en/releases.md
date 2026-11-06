@@ -18,3 +18,9 @@
 Archives are named `cjr-v<version>-<target>` and contain the executable and both READMEs. The minimum macOS version is 13.0. Each release binary is run with `--version`. Once all jobs succeed, `softprops/action-gh-release` publishes the draft. Failed jobs leave it unpublished and can be rerun in Actions. Do not move published tags; ship subsequent fixes in a new version.
 
 Actions are pinned to full commit SHAs and tracked by Dependabot. The workflow uses GitHub's `GITHUB_TOKEN`, granting write access only to jobs that create, upload or publish the release.
+
+## Static linking
+
+`.cargo/config.toml` enables `crt-static` for Windows MSVC and Linux musl. Windows embeds the C/C++ runtime while retaining Windows system DLL imports. Linux release binaries must have neither dynamic dependencies nor an ELF interpreter. Rust dependencies and bundled native libraries are linked statically. macOS retains system libraries under `/usr/lib/` and `/System/Library/`; libSystem and system frameworks are not replaced with static libraries.
+
+The release workflow reads each final binary's dependency table and rejects a dynamic Windows CRT, any Linux dynamic dependency, or non-system macOS libraries. This policy applies to cjr itself; Cangjie applications still use their matching dynamic runtime.

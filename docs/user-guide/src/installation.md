@@ -27,7 +27,7 @@ cjr --version
 # cjr 0.0.1
 ```
 
-macOS 预编译版本要求 macOS 13 或更新版本。Linux 版本使用 musl 静态链接；目标仓颉程序及其运行库的系统要求仍需满足。
+Windows 版本已包含 C/C++ 运行时，无需单独安装 Visual C++ Redistributable。macOS 预编译版本要求 macOS 13 或更新版本。Linux 版本使用 musl 静态链接；目标仓颉程序及其运行库的系统要求仍需满足。
 
 ## 从源码安装
 

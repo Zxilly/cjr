@@ -86,6 +86,34 @@ jobs:
         env:
           BINARY: target/${{ matrix.target }}/release/cjr${{ matrix.extension }}
         run: test "$("$BINARY" --version)" = "cjr ${GITHUB_REF_NAME#v}"
+      - name: Check release dynamic dependencies
+        shell: pwsh
+        env:
+          BINARY: target/${{ matrix.target }}/release/cjr${{ matrix.extension }}
+        run: |
+          $inspection = & $env:BINARY inspect $env:BINARY --json | ConvertFrom-Json
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot inspect release binary' }
+          $report = $inspection.binary
+          $libraries = @($report.dependencies | ForEach-Object { $_.name })
+          switch ($report.target.os) {
+            'linux' {
+              if ($libraries.Count -ne 0 -or $report.interpreter) {
+                throw "Linux release must be static: $libraries"
+              }
+            }
+            'windows' {
+              $crt = @($libraries | Where-Object { $_ -match '^(vcruntime|msvcp|concrt|ucrtbase|msvcr|api-ms-win-crt)' })
+              if ($crt.Count -ne 0) { throw "Windows release imports a dynamic CRT: $crt" }
+              $external = @($libraries | Where-Object { $_ -notmatch '^(api-ms-win-|ext-ms-win-)|^(kernel32|kernelbase|ntdll|advapi32|bcrypt|bcryptprimitives|crypt32|ws2_32|iphlpapi|userenv|user32|shell32|ole32|oleaut32|secur32|ncrypt|normaliz|psapi)\.dll$' })
+              if ($external.Count -ne 0) { throw "Windows release imports an unexpected library: $external" }
+            }
+            'macos' {
+              $external = @($libraries | Where-Object { $_ -notmatch '^(/usr/lib/|/System/Library/)' })
+              if ($external.Count -ne 0) { throw "macOS release imports a non-system library: $external" }
+            }
+            default { throw "Unexpected release platform: $($report.target.os)" }
+          }
+          $libraries | ForEach-Object { Write-Output "System dependency: $_" }
   publish:
     needs: binaries
     runs-on: ubuntu-latest

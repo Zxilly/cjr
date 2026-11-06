@@ -1,0 +1,7 @@
+# Ship the MSVC runtime inside cjr rather than requiring a redistributable.
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+# Keep the Linux release independent of the host's libc and dynamic loader.
+[target.x86_64-unknown-linux-musl]
+rustflags = ["-C", "target-feature=+crt-static"]
