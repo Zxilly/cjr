@@ -124,3 +124,8 @@ jobs:
         with:
           draft: false
           make_latest: 'true'
+  website:
+    needs: publish
+    uses: ./.github/workflows/website.yml
+    secrets:
+      EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}

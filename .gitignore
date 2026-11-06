@@ -5,3 +5,5 @@
 /web/dist/
 /docs/*/book/
 **/__pycache__/
+/.edgeone/
+/.cloudflare/

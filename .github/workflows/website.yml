@@ -1,0 +1,57 @@
+name: Deploy website to EdgeOne
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'web/**'
+      - 'docs/**'
+      - 'Cargo.toml'
+      - '.github/workflows/website.yml'
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      EDGEONE_API_TOKEN:
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: production
+      url: https://cjr.zxilly.com
+    env:
+      EDGEONE_PROJECT_NAME: ${{ vars.EDGEONE_PROJECT_NAME }}
+      EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: lts/*
+          check-latest: true
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install mdBook
+        run: |
+          curl --fail --location --retry 3 https://github.com/rust-lang/mdBook/releases/download/v0.5.4/mdbook-v0.5.4-x86_64-unknown-linux-musl.tar.gz | tar -xz -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+      - run: npm ci --no-audit --no-fund
+        working-directory: web
+      - run: npm test
+        working-directory: web
+      - name: Deploy production site
+        run: |
+          : "${EDGEONE_PROJECT_NAME:?Set the EDGEONE_PROJECT_NAME repository variable}"
+          : "${EDGEONE_API_TOKEN:?Set the EDGEONE_API_TOKEN repository secret}"
+          npx --yes edgeone@1.6.47 login --site china --token "$EDGEONE_API_TOKEN"
+          npx --yes edgeone@1.6.47 makers deploy ./dist \
+            --name "$EDGEONE_PROJECT_NAME" --area global --env production --skip-ai-gateway-sync \
+            | sed -E 's/(eo_token=)[^&[:space:]"]+/\1[redacted]/g'
