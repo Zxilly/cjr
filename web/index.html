@@ -30,10 +30,9 @@
         </header>
 
         <section class="quickstart" aria-label="开始使用" data-label="quickstart">
-          <div class="tabs" role="tablist" aria-label="使用步骤" data-label="steps">
-            <button type="button" id="tab-install" role="tab" aria-selected="true" aria-controls="panel-install" data-tab="install" data-text="install">安装 cjr</button>
-            <button type="button" id="tab-run" role="tab" aria-selected="false" aria-controls="panel-run" tabindex="-1" data-tab="run" data-text="run">运行程序</button>
-            <button type="button" id="tab-cache" role="tab" aria-selected="false" aria-controls="panel-cache" tabindex="-1" data-tab="cache" data-text="manage">查看与清理</button>
+          <div class="tabs" role="tablist" aria-label="安装方式" data-label="steps">
+            <button type="button" id="tab-install" role="tab" aria-selected="true" aria-controls="panel-install" data-tab="install" data-text="install">下载安装</button>
+            <button type="button" id="tab-source" role="tab" aria-selected="false" aria-controls="panel-source" tabindex="-1" data-tab="source" data-text="sourceInstall">编译安装</button>
           </div>
           <div id="panel-install" class="panel" role="tabpanel" aria-labelledby="tab-install" tabindex="0">
             <h2 data-text="installTitle">下载 cjr</h2>
@@ -44,28 +43,17 @@
               <a data-asset="aarch64-apple-darwin.tar.gz" data-text="macArm">macOS Apple Silicon</a>
               <a data-asset="x86_64-apple-darwin.tar.gz" data-text="macIntel">macOS Intel</a>
             </div>
-            <a class="text-link" data-release data-text="releaseNotes">更新说明与 SHA-256 →</a>
-            <details class="source-install">
-              <summary data-text="sourceInstall">从源码安装</summary>
-              <p class="note" data-text="sourceRequirements">需要 Rust 1.89+、C 编译器和 CMake。</p>
-              <div class="codeblock"><code id="install-command"></code><button type="button" class="copy" data-copy="install-command" aria-label="复制安装命令" data-label="copyInstall"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></button></div>
-            </details>
+            <div class="panel-actions">
+              <a class="text-link" data-release data-text="releaseNotes">更新说明与 SHA-256 →</a>
+              <a class="text-link" data-book="user-guide" data-page="installation.html" href="%BASE_URL%book/user-guide/zh-CN/installation.html" data-text="installDocs">查看安装说明 →</a>
+            </div>
+          </div>
+          <div id="panel-source" class="panel" role="tabpanel" aria-labelledby="tab-source" tabindex="0" hidden>
+            <h2 data-text="sourceTitle">使用 Cargo 编译安装</h2>
+            <p data-text="sourceRequirements">需要 Rust 1.89+、C 编译器和 CMake。Windows 使用 MSVC 工具链。</p>
+            <div class="codeblock"><code id="install-command"></code><button type="button" class="copy" data-copy="install-command" aria-label="复制安装命令" data-label="copyInstall"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></button></div>
+            <p class="note" data-text="sourcePath">安装完成后，确认 Cargo 的 bin 目录已加入 PATH。</p>
             <a class="text-link" data-book="user-guide" data-page="installation.html" href="%BASE_URL%book/user-guide/zh-CN/installation.html" data-text="installDocs">查看安装说明 →</a>
-          </div>
-          <div id="panel-run" class="panel" role="tabpanel" aria-labelledby="tab-run" tabindex="0" hidden>
-            <h2 data-text="runTitle">带上程序路径即可</h2>
-            <p data-text="runHint">程序路径之后的参数原样传给应用。</p>
-            <div class="codeblock"><code id="run-command">cjr ./app --port 8080</code><button type="button" class="copy" data-copy="run-command" aria-label="复制运行命令" data-label="copyRun"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></button></div>
-            <p class="note" data-text="offline">缓存准备好后，使用 cjr --offline ./app 离线运行。Windows 路径可写为 .\app.exe。</p>
-          </div>
-          <div id="panel-cache" class="panel" role="tabpanel" aria-labelledby="tab-cache" tabindex="0" hidden>
-            <h2 data-text="manageTitle">版本与缓存，随时查看</h2>
-            <dl class="commands">
-              <div><dt><code>cjr inspect ./app</code></dt><dd data-text="inspectHint">查看版本和依赖</dd></div>
-              <div><dt><code>cjr list</code></dt><dd data-text="listHint">列出本地缓存</dd></div>
-              <div><dt><code>cjr cache clean --dry-run</code></dt><dd data-text="cleanHint">预览清理内容</dd></div>
-            </dl>
-            <a class="text-link" data-book="user-guide" data-page="commands.html" href="%BASE_URL%book/user-guide/zh-CN/commands.html" data-text="commandsDocs">完整命令参考 →</a>
           </div>
         </section>
 

@@ -56,16 +56,11 @@ h2 { font-size: 18px; font-weight: 600; margin: 0 0 8px; line-height: 1.5; }
 .copy:hover { color: var(--green); background: var(--surface); }
 .copy svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; }
 .text-link { color: var(--green); font-size: 14px; }
+.panel-actions { display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .downloads { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
 .downloads a { padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--green); font-size: 14px; font-weight: 500; }
 .downloads a:hover { border-color: var(--green); background: var(--wash); }
-.source-install { margin: 20px 0; font-size: 14px; }
-.source-install summary { cursor: pointer; color: var(--muted); }
-.source-install .note { font-size: 13px; color: var(--muted); line-height: 1.8; }
-.panel > .note { margin: 0; font-size: 13px; }
-.commands { margin: 16px 0 20px; font-size: 12px; }
-.commands > div { display: flex; gap: 16px; justify-content: space-between; margin: 12px 0; }
-.commands dd { margin: 0; color: var(--muted); text-align: right; }
+.panel > .note { margin: 0 0 18px; font-size: 13px; }
 .reading { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 34px; }
 .guide { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 0 0 18px; border-bottom: 1px solid var(--line); }
 .guide > span > span { display: block; color: var(--muted); font-size: 12px; margin-top: 7px; line-height: 1.7; }
@@ -88,8 +83,6 @@ footer { display: flex; flex-wrap: wrap; gap: 24px; margin: 32px 0 38px; font-si
   .tabs button { padding: 15px 5px; font-size: 13px; }
   .reading { grid-template-columns: 1fr; gap: 22px; }
   .downloads { grid-template-columns: 1fr; }
-  .commands > div { flex-direction: column; gap: 4px; }
-  .commands dd { text-align: left; }
 }
 @media (prefers-color-scheme: dark) {
   :root { --paper: #131b17; --surface: #19241e; --ink: #e5eee8; --muted: #a7b8ad; --green: #58dca0; --line: #34463b; --wash: #202e25; --selection: #315b42; }
