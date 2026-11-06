@@ -24,6 +24,8 @@
 - `research/implementation_lock.py`：Go 进程按 cjv 的顺序/字节范围持锁时拒绝快照，释放后快照成功；验证 OS 锁协议，未覆盖完整 cjv 更新事务。
 - `scripts/sdk_acceptance.py`：可在干净 CI 主机重复的官方下载、编译和运行流程，包含 macOS。
 
+macOS 验收使用 `xcrun` 选择当前 Apple SDK 和系统链接器。SDK 1.0.5 自带 LLD 无法读取当前 Xcode 的 TBD 文件，因此仅在测试用编译器目录中替换链接器入口，并关闭 chained fixups，使产物保持已支持的普通指针布局。仓颉编译器、标准库和运行库均来自同版官方 SDK；供 cjr 复用的归档保持原始摘要。该验收不覆盖 LTO 或 chained fixups。
+
 每次本地运行的 JSON 结果保存在被忽略的 `research/implementation-artifacts/` 中；摘要见 [acceptance-summary.json](acceptance-summary.json)。研究报告保留了早期失败案例；下表记录当前实现的测试结果。
 
 测试使用 SDK 1.0.5、1.1.3 和 1.2.0。

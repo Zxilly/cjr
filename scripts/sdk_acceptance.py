@@ -99,11 +99,28 @@ for version in args.versions:
     sdk = extracted / "cangjie"
     compiler = sdk / "bin" / ("cjc.exe" if host == "Windows" else "cjc")
     compile_env = dict(os.environ, CANGJIE_HOME=str(sdk))
+    platform_flags = []
     if host == "Darwin":
         # Match the official envsetup.sh: cjc needs Apple's SDK for libSystem.
         compile_env["SDKROOT"] = subprocess.check_output(
             ["xcrun", "--sdk", "macosx", "--show-sdk-path"], text=True, timeout=30
         ).strip()
+        # Old bundled LLD cannot read current Xcode TBD files. Use Apple's
+        # matching linker in this disposable compiler tree only. The verified
+        # archive reused by cjr, and all Cangjie libraries, remain untouched.
+        apple_ld = (
+            run(f"linker/{version}", ["xcrun", "--find", "ld"], compile_env)
+            .stdout.decode()
+            .strip()
+        )
+        bundled_ld = sdk / "third_party/llvm/bin/ld64.lld"
+        saved_ld = bundled_ld.with_name("ld64.lld.bundled")
+        if not saved_ld.exists():
+            bundled_ld.rename(saved_ld)
+            bundled_ld.symlink_to(apple_ld)
+        # Match bundled LLD's ordinary pointer layout; chained metadata fixups
+        # are outside the currently supported binary formats.
+        platform_flags = ["--link-options", "-no_fixup_chains"]
     home = root / version / "cjr"
     cjv = root / version / "cjv"
     (home / "metadata").mkdir(parents=True, exist_ok=True)
@@ -146,7 +163,14 @@ for version in args.versions:
         binary = root / version / (mode + (".exe" if host == "Windows" else ""))
         run(
             f"compile/{version}/{mode}",
-            [compiler, repo / "tests/fixtures/workload.cj", *flags, "-o", binary],
+            [
+                compiler,
+                repo / "tests/fixtures/workload.cj",
+                *platform_flags,
+                *flags,
+                "-o",
+                binary,
+            ],
             compile_env,
         )
         inspected = run(
