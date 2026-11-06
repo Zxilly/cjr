@@ -51,18 +51,12 @@ pub(crate) fn boot_identity() -> Option<BootIdentity> {
     }
 }
 
+#[cfg(all(target_os = "linux", target_env = "gnu"))]
 pub(crate) fn glibc_version() -> Option<String> {
-    #[cfg(all(target_os = "linux", target_env = "gnu"))]
-    {
-        unsafe extern "C" {
-            fn gnu_get_libc_version() -> *const libc::c_char;
-        }
-        // SAFETY: glibc returns a process-lifetime, NUL-terminated static version string.
-        let value = unsafe { std::ffi::CStr::from_ptr(gnu_get_libc_version()) };
-        Some(value.to_string_lossy().into_owned())
+    unsafe extern "C" {
+        fn gnu_get_libc_version() -> *const libc::c_char;
     }
-    #[cfg(not(all(target_os = "linux", target_env = "gnu")))]
-    {
-        None
-    }
+    // SAFETY: glibc returns a process-lifetime, NUL-terminated static version string.
+    let value = unsafe { std::ffi::CStr::from_ptr(gnu_get_libc_version()) };
+    Some(value.to_string_lossy().into_owned())
 }

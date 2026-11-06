@@ -7,7 +7,9 @@ mod unix;
 pub(crate) mod windows;
 
 #[cfg(unix)]
-pub(crate) use unix::{boot_identity, glibc_version};
+pub(crate) use unix::boot_identity;
+#[cfg(all(target_os = "linux", target_env = "gnu"))]
+pub(crate) use unix::glibc_version;
 #[cfg(windows)]
 pub(crate) use windows::boot_identity;
 

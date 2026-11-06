@@ -167,13 +167,11 @@ fn pointers(
         ));
     }
     let mut out = vec![];
-    for (i, p) in raw.chunks_exact(8).enumerate() {
+    for (i, p) in raw.as_chunks::<8>().0.iter().enumerate() {
         let address = replacements
             .and_then(|m| m.get(&(i * 8)))
             .copied()
-            .unwrap_or(u64::from_le_bytes(p.try_into().map_err(|_| {
-                Error::new("MalformedBinary", "invalid pointer width")
-            })?));
+            .unwrap_or(u64::from_le_bytes(*p));
         if address == 0 {
             continue;
         }

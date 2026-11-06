@@ -27,7 +27,7 @@ pub(super) fn versions(file: &object::File<'_>) -> Result<Vec<String>> {
             if raw.len() % 24 != 0 {
                 return Err(Error::new("MalformedBinary", "invalid RELA table"));
             }
-            for entry in raw.chunks_exact(24) {
+            for entry in raw.as_chunks::<24>().0 {
                 let address = u64_at(entry, 0)?;
                 let kind = u64_at(entry, 8)? as u32;
                 let base = s
@@ -70,7 +70,7 @@ pub(super) fn dynamic(file: &object::File<'_>, r: &mut InspectReport) -> Result<
     if raw.len() % 16 != 0 {
         return Err(Error::new("MalformedBinary", "invalid dynamic section"));
     }
-    for entry in raw.chunks_exact(16) {
+    for entry in raw.as_chunks::<16>().0 {
         let tag = u64_at(entry, 0)?;
         let value = u64_at(entry, 8)?;
         if tag == 0x6ffffffb && value & 0x08000000 != 0 {
