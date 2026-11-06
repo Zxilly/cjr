@@ -4,7 +4,9 @@
 
 English | [中文](README.md)
 
-cjr matches a Cangjie program to its official runtime and launches it. It reads the full SDK version from binary metadata, reuses cjv content where available and downloads an SDK only when matching local content is missing.
+Run Cangjie programs with one command. cjr handles the runtime for you.
+
+[Website](https://cjr.zxilly.com/en/) · [User guide](https://cjr.zxilly.com/book/user-guide/en/)
 
 ```sh
 cjr ./app --port 8080

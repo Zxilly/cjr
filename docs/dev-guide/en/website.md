@@ -44,7 +44,7 @@ dist/
 
 The default base path is `/`. For a subpath deployment such as GitHub Pages at `/cjr/`, set `SITE_BASE=/cjr/` when building. Landing-page links and assets share that prefix.
 
-Deploy the whole `dist/` directory to a static host. The build does not publish the site or configure a domain. Do not commit `node_modules/`, `dist/` or mdBook `book/` output.
+Upload the whole `dist/` directory. Do not commit `node_modules/`, `dist/`, `.edgeone/` or mdBook `book/` output.
 
 Update both languages and their `SUMMARY.md` files when editing documentation. Installation instructions must use available methods; do not add download buttons for unpublished binaries or installer scripts.
 
@@ -57,3 +57,28 @@ The build generates complete HTML at `/zh-CN/` and `/en/`. Download and document
 Both documentation languages use matching chapter filenames. The build adds language links to each chapter. Switching keeps the chapter and drops heading anchors that differ between translations. Home links preserve the selected language. Chinese documentation toolbar translations live in `web/src/locales/book-zh-CN.json`.
 
 `npm test` builds the site and verifies language pages, downloads and chapter switching. Add messages to both languages; missing translation keys fail the build. Use `SITE_BASE=/cjr/ npm test` to check a subpath deployment.
+
+## Production deployment
+
+The website at [cjr.zxilly.com](https://cjr.zxilly.com) runs on EdgeOne Makers. The `cjr-web` project uses a Tencent Cloud China-site account with global coverage, including mainland China.
+
+`.github/workflows/website.yml` builds, tests and uploads the complete site when website, documentation, version or deployment workflow files change on `master`. It also supports manual runs. The release workflow calls it after publishing a release to update the version and download links. Production deployments run serially without interrupting an upload in progress.
+
+GitHub repository settings:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| Variable | `EDGEONE_PROJECT_NAME` | `cjr-web` |
+| Secret | `EDGEONE_API_TOKEN` | China-site Makers API token |
+
+Bind `cjr.zxilly.com` to production in Makers, then add the CNAME target provided by the console to Cloudflare with **DNS only** enabled. Makers manages the certificate. DNS and domain binding are one-time settings; deployments do not change them.
+
+To deploy an already built site manually:
+
+```sh
+npx --yes edgeone@1.6.47 login --site china --token "$EDGEONE_API_TOKEN"
+npx --yes edgeone@1.6.47 makers deploy ./dist \
+  --name cjr-web --area global --env production --skip-ai-gateway-sync
+```
+
+Deployment runs are listed in [GitHub Actions](https://github.com/Zxilly/cjr/actions/workflows/website.yml). To roll back, select an earlier successful production deployment in Makers.

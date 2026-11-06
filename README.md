@@ -4,7 +4,9 @@
 
 [English](README.EN.md) | 中文
 
-cjr 为仓颉程序匹配官方运行库并启动程序。它读取二进制中的完整 SDK 版本，优先复用 cjv 缓存，本地没有匹配内容时再下载。
+cjr 自动准备所需运行库，用一条命令启动仓颉程序。
+
+[官网](https://cjr.zxilly.com/zh-CN/) · [用户手册](https://cjr.zxilly.com/book/user-guide/zh-CN/)
 
 ```sh
 cjr ./app --port 8080
