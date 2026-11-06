@@ -6,7 +6,7 @@ import './style.css';
 const english = {
   skip: 'Skip to content', navigation: 'Site navigation', language: 'Language',
   headline: 'Run Cangjie programs.',
-  intro: 'The official runtime, matched to your program’s SDK version. Reuse your cjv cache before downloading.',
+  intro: 'Start your Cangjie program with one command. Skip the search for runtimes and the manual setup.',
   quickstart: 'Get started', steps: 'Getting started steps',
   install: 'Install cjr', run: 'Run a program', manage: 'Inspect & clean',
   installTitle: 'Install from source', requirements: 'Requires Rust 1.89+, a C compiler and CMake.',
@@ -16,16 +16,15 @@ const english = {
   offline: 'Once cached, run offline with cjr --offline ./app. On Windows, use a path such as .\\app.exe.',
   manageTitle: 'See versions and local content', inspectHint: 'Inspect version and dependencies',
   listHint: 'List local content', cleanHint: 'Preview cache cleanup', commandsDocs: 'Command reference →',
-  cacheNote: 'Reuse cjv content. Keep cjr runtimes in their own cache.',
   docs: 'Documentation', userGuide: 'User guide', userGuideHint: 'Installation, commands, cache and troubleshooting',
-  devGuide: 'Developer guide', devGuideHint: 'Build, modules and platform implementation',
-  scope: 'Official releases only. Application libraries and system dependencies remain the responsibility of the application or system. Available versions depend on the official manifest.',
+  devGuide: 'Developer guide', devGuideHint: 'Build from source and contribute',
+  scope: 'Supported platforms and limitations →',
   issues: 'Report an issue', cangjie: 'Cangjie',
 };
 const language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'zh-CN';
 if (language === 'en') {
   document.documentElement.lang = 'en';
-  document.title = 'cjr — Cangjie runtime manager';
+  document.title = 'cjr — Run Cangjie programs';
   document.querySelector('meta[name="description"]').content = english.intro;
   for (const element of document.querySelectorAll('[data-text]')) {
     element.textContent = english[element.dataset.text];

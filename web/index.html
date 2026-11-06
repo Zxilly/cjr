@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="cjr 为仓颉程序自动匹配官方运行库，优先复用 cjv 缓存。支持查看版本、离线运行和缓存清理。">
+    <meta name="description" content="cjr 让你用一条命令启动仓颉程序，省去寻找和配置运行库的麻烦。支持 Windows、Linux 和 macOS。">
     <meta name="theme-color" content="#f9fbfa">
     <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml">
-    <title>cjr — 仓颉程序运行库管理器</title>
+    <title>cjr — 仓颉程序，直接运行</title>
   </head>
   <body>
     <a class="skip" href="#main" data-text="skip">跳到正文</a>
@@ -24,7 +24,7 @@
         <header class="hero">
           <h1>cjr<span class="cursor" aria-hidden="true">_</span></h1>
           <p class="headline" data-text="headline">仓颉程序，直接运行。</p>
-          <p class="intro" data-text="intro">读取程序中的 SDK 版本，自动准备对应的官方运行库。已有 cjv 缓存时优先复用。</p>
+          <p class="intro" data-text="intro">省去寻找和配置运行库的麻烦，用一条命令启动仓颉程序。</p>
           <div class="launch"><span aria-hidden="true">$</span><code>cjr ./app</code></div>
           <p class="platforms">Windows x64 <span>·</span> Linux x64 <span>·</span> macOS ARM64 / x64</p>
         </header>
@@ -56,14 +56,13 @@
             </dl>
             <a class="text-link" data-book="user-guide" data-page="commands.html" href="%BASE_URL%book/user-guide/zh-CN/commands.html" data-text="commandsDocs">完整命令参考 →</a>
           </div>
-          <div class="cache-note"><span class="status-dot" aria-hidden="true"></span><span data-text="cacheNote">自动读取 cjv 缓存，独立管理 cjr 运行库。</span></div>
         </section>
 
         <section class="reading" aria-label="文档" data-label="docs">
           <a class="guide" data-book="user-guide" data-page="" href="%BASE_URL%book/user-guide/zh-CN/"><span><strong data-text="userGuide">用户手册</strong><span data-text="userGuideHint">安装、命令、缓存与常见问题</span></span><span aria-hidden="true">↗</span></a>
-          <a class="guide" data-book="dev-guide" data-page="" href="%BASE_URL%book/dev-guide/zh-CN/"><span><strong data-text="devGuide">开发指南</strong><span data-text="devGuideHint">构建、模块与平台实现</span></span><span aria-hidden="true">↗</span></a>
+          <a class="guide" data-book="dev-guide" data-page="" href="%BASE_URL%book/dev-guide/zh-CN/"><span><strong data-text="devGuide">开发指南</strong><span data-text="devGuideHint">从源码构建，参与项目开发</span></span><span aria-hidden="true">↗</span></a>
         </section>
-        <p class="scope" data-text="scope">仅匹配官方发行版。应用自己的动态库与系统依赖仍需随应用或由系统提供；可用版本以官方清单为准。</p>
+        <p class="scope"><a data-book="user-guide" data-page="platforms.html" href="%BASE_URL%book/user-guide/zh-CN/platforms.html" data-text="scope">查看支持范围 →</a></p>
       </main>
       <footer><a href="https://github.com/Zxilly/cjr">GitHub</a><a href="https://github.com/Zxilly/cjr/issues" data-text="issues">问题反馈</a><a href="https://cjv.zxilly.com">cjv</a><a href="https://cangjie-lang.cn/" data-text="cangjie">仓颉官网</a></footer>
       <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
