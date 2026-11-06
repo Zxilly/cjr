@@ -42,17 +42,17 @@ results = []
 
 def run(name, command, env, expected=0):
     p = subprocess.run(
-        list(map(str, command)), env=env, capture_output=True, timeout=300
+        list(map(str, command)), check=False, env=env, capture_output=True, timeout=300
     )
     results.append(
-        dict(
-            name=name,
-            command=list(map(str, command)),
-            exit=p.returncode,
-            expected=expected,
-            stdout=p.stdout.decode(errors="replace"),
-            stderr=p.stderr.decode(errors="replace"),
-        )
+        {
+            "name": name,
+            "command": list(map(str, command)),
+            "exit": p.returncode,
+            "expected": expected,
+            "stdout": p.stdout.decode(errors="replace"),
+            "stderr": p.stderr.decode(errors="replace"),
+        }
     )
     (root / "results.json").write_text(
         json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8"
@@ -103,7 +103,7 @@ for version in args.versions:
     (home / "metadata").mkdir(parents=True, exist_ok=True)
     (home / "metadata/versions.json").write_bytes(manifest_bytes)
     (home / ".cjr-store.json").write_text(
-        json.dumps(dict(schema_version=1, kind="cjr-runtime-store"))
+        json.dumps({"schema_version": 1, "kind": "cjr-runtime-store"})
     )
     (cjv / "cache").mkdir(parents=True, exist_ok=True)
     cachekey = hashlib.sha256(
@@ -114,13 +114,13 @@ for version in args.versions:
         os.link(archive, cached)
     (cjv / "cache" / f"{cachekey}.json").write_text(
         json.dumps(
-            dict(
-                key=cachekey,
-                kind="artifact",
-                url=a["url"],
-                sha256=digest,
-                size=archive.stat().st_size(),
-            )
+            {
+                "key": cachekey,
+                "kind": "artifact",
+                "url": a["url"],
+                "sha256": digest,
+                "size": archive.stat().st_size,
+            }
         )
     )
     env = dict(os.environ, CJR_HOME=str(home), CJV_HOME=str(cjv))
