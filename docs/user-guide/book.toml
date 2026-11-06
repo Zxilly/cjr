@@ -1,0 +1,10 @@
+[book]
+title = "cjr 用户手册"
+authors = ["Zxilly"]
+language = "zh-CN"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/Zxilly/cjr"
+default-theme = "light"
+preferred-dark-theme = "navy"

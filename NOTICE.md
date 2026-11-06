@@ -10,6 +10,9 @@ Official distribution metadata comes from
 (ISC license). That license does not replace the Cangjie SDK or runtime licenses.
 cjr retains the SDK's top-level license/notice files with the extracted payload.
 
-Downloaded SDKs, generated research binaries, build caches and private fixture
-stores are excluded from source control. Rust dependency licenses are supplied
-by their respective crates and recorded dependency identities in Cargo.lock.
+Rust dependency licenses are supplied by their respective crates, with dependency
+identities recorded in Cargo.lock.
+
+The website uses Patua One, JetBrains Mono and Noto Sans SC through Fontsource,
+under the SIL Open Font License 1.1. Website builds include their license files
+in the generated `licenses/` directory.
