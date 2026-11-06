@@ -1,0 +1,211 @@
+[
+  {
+    "sdk": "cangjie-sdk-mac-aarch64-1.0.5",
+    "regular_libraries": 53,
+    "library_symlinks": [],
+    "metadata_libraries": 45,
+    "version_values": [
+      "1.0.5"
+    ],
+    "metadata_decode_errors": 0,
+    "unresolved_rpath_basenames": [],
+    "cjpm": {
+      "path": "extracted\\cangjie-sdk-mac-aarch64-1.0.5\\cangjie\\tools\\bin\\cjpm",
+      "bytes": 9553856,
+      "cpu": "0x100000c",
+      "cpu_subtype": 0,
+      "filetype": 2,
+      "flags": "0x218085",
+      "universal": false,
+      "metadata_sections": [
+        {
+          "name": "__cjmetaheader",
+          "segment": "__CJMETAHEADER",
+          "address": 4299014144,
+          "size": 320,
+          "offset": 4046848
+        },
+        {
+          "name": "__cjsdkversion",
+          "segment": "__CJ_METADATA",
+          "address": 4299030528,
+          "size": 200,
+          "offset": 4063232
+        }
+      ],
+      "versions": [
+        "1.0.5"
+      ],
+      "version_entries": 25,
+      "decode_errors": [],
+      "dependencies": [
+        {
+          "command": "0xc",
+          "path": "@rpath/libcangjie-runtime.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "@rpath/libboundscheck.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "/usr/lib/libSystem.B.dylib"
+        }
+      ],
+      "rpaths": [
+        "@loader_path/../../runtime/lib/darwin_aarch64_cjnative"
+      ],
+      "has_chained_fixups": false,
+      "has_dyld_info": true,
+      "code_signature": true
+    }
+  },
+  {
+    "sdk": "cangjie-sdk-mac-aarch64-1.2.0",
+    "regular_libraries": 51,
+    "library_symlinks": [
+      {
+        "link": "cangjie/runtime/lib/darwin_aarch64_cjnative/libpcre2-8.0.dylib",
+        "target": "libpcre2-8.0.14.0.dylib"
+      },
+      {
+        "link": "cangjie/runtime/lib/darwin_aarch64_cjnative/libpcre2-8.dylib",
+        "target": "libpcre2-8.0.dylib"
+      }
+    ],
+    "metadata_libraries": 46,
+    "version_values": [
+      "1.2.0"
+    ],
+    "metadata_decode_errors": 0,
+    "unresolved_rpath_basenames": [],
+    "cjpm": {
+      "path": "extracted\\cangjie-sdk-mac-aarch64-1.2.0\\cangjie\\tools\\bin\\cjpm",
+      "bytes": 21109200,
+      "cpu": "0x100000c",
+      "cpu_subtype": 0,
+      "filetype": 2,
+      "flags": "0xa18085",
+      "universal": false,
+      "metadata_sections": [
+        {
+          "name": "__cjmetaheader",
+          "segment": "__CJMETAHEADER",
+          "address": 4303470592,
+          "size": 336,
+          "offset": 8486912
+        },
+        {
+          "name": "__cjsdkversion",
+          "segment": "__CJ_METADATA",
+          "address": 4303486976,
+          "size": 400,
+          "offset": 8503296
+        }
+      ],
+      "versions": [
+        "1.2.0"
+      ],
+      "version_entries": 50,
+      "decode_errors": [],
+      "dependencies": [
+        {
+          "command": "0xc",
+          "path": "/usr/lib/libc++.1.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "/usr/lib/libSystem.B.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "@rpath/libcangjie-runtime.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "@rpath/libboundscheck.dylib"
+        }
+      ],
+      "rpaths": [
+        "@loader_path/../../runtime/lib/darwin_aarch64_cjnative"
+      ],
+      "has_chained_fixups": false,
+      "has_dyld_info": true,
+      "code_signature": true
+    }
+  },
+  {
+    "sdk": "cangjie-sdk-mac-x64-1.3.0-alpha.20261107001016",
+    "regular_libraries": 52,
+    "library_symlinks": [
+      {
+        "link": "cangjie/runtime/lib/darwin_x86_64_cjnative/libpcre2-8.0.dylib",
+        "target": "libpcre2-8.0.14.0.dylib"
+      },
+      {
+        "link": "cangjie/runtime/lib/darwin_x86_64_cjnative/libpcre2-8.dylib",
+        "target": "libpcre2-8.0.dylib"
+      }
+    ],
+    "metadata_libraries": 47,
+    "version_values": [
+      "1.3.0-alpha.20261107001016"
+    ],
+    "metadata_decode_errors": 0,
+    "unresolved_rpath_basenames": [],
+    "cjpm": {
+      "path": "extracted\\cangjie-sdk-mac-x64-1.3.0-alpha.20261107001016\\cangjie\\tools\\bin\\cjpm",
+      "bytes": 22277632,
+      "cpu": "0x1000007",
+      "cpu_subtype": 2147483651,
+      "filetype": 2,
+      "flags": "0xa18085",
+      "universal": false,
+      "metadata_sections": [
+        {
+          "name": "__cjmetaheader",
+          "segment": "__CJMETAHEADER",
+          "address": 4305326080,
+          "size": 336,
+          "offset": 10346496
+        },
+        {
+          "name": "__cjsdkversion",
+          "segment": "__CJ_METADATA",
+          "address": 4305330176,
+          "size": 400,
+          "offset": 10350592
+        }
+      ],
+      "versions": [
+        "1.3.0-alpha.20261107001016"
+      ],
+      "version_entries": 50,
+      "decode_errors": [],
+      "dependencies": [
+        {
+          "command": "0xc",
+          "path": "/usr/lib/libc++.1.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "/usr/lib/libSystem.B.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "@rpath/libcangjie-runtime.dylib"
+        },
+        {
+          "command": "0xc",
+          "path": "@rpath/libboundscheck.dylib"
+        }
+      ],
+      "rpaths": [
+        "@loader_path/../../runtime/lib/darwin_x86_64_cjnative"
+      ],
+      "has_chained_fixups": false,
+      "has_dyld_info": true,
+      "code_signature": false
+    }
+  }
+]

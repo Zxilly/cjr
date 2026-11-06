@@ -1,0 +1,23 @@
+[
+  {
+    "name": "cangjie-sdk-linux-x64-1.0.5.tar.gz",
+    "sha256": "bacad84df8e0281c5395bab4c40e481e3ea6cc712eed5c953903b0d561a14562",
+    "url": "https://cangjie-lang.cn/v1/files/auth/downLoad?nsId=142267&fileName=cangjie-sdk-linux-x64-1.0.5.tar.gz&objectKey=698acf46bd66ae22b62330b0",
+    "version": "1.0.5",
+    "channel": "lts"
+  },
+  {
+    "name": "cangjie-sdk-linux-x64-1.1.3.tar.gz",
+    "sha256": "2b68905afc466e665ae181595c63f96c18d75fd2c1fb6c6f0cb64e179c28d61a",
+    "url": "https://cangjie-lang.cn/v1/files/auth/downLoad?nsId=142267&fileName=cangjie-sdk-linux-x64-1.1.3.tar.gz&objectKey=6a19349d21f5a8178d6fd22b",
+    "version": "1.1.3",
+    "channel": "sts"
+  },
+  {
+    "name": "cangjie-sdk-linux-x64-1.2.0.tar.gz",
+    "sha256": "8c5fd944cd9cc51ee63d4a240e3ecc4f540345dae1468e8b47c927ecf2ba998f",
+    "url": "https://cangjie-lang.cn/v1/files/auth/downLoad?nsId=142267&fileName=cangjie-sdk-linux-x64-1.2.0.tar.gz&objectKey=6ab1e26eece1f87ff5befa73",
+    "version": "1.2.0",
+    "channel": "sts"
+  }
+]

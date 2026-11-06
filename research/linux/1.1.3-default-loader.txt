@@ -1,0 +1,118 @@
+   2040837:	find library=libcangjie-runtime.so [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/glibc-hwcaps/x86-64-v4:/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/glibc-hwcaps/x86-64-v3:/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/glibc-hwcaps/x86-64-v2:/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/glibc-hwcaps/x86-64-v4/libcangjie-runtime.so
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/glibc-hwcaps/x86-64-v3/libcangjie-runtime.so
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/glibc-hwcaps/x86-64-v2/libcangjie-runtime.so
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libcangjie-runtime.so
+   2040837:
+   2040837:	find library=libboundscheck.so [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libboundscheck.so
+   2040837:
+   2040837:	find library=libm.so.6 [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libm.so.6
+   2040837:	 search cache=/etc/ld.so.cache
+   2040837:	  trying file=/lib/x86_64-linux-gnu/libm.so.6
+   2040837:
+   2040837:	find library=libc.so.6 [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libc.so.6
+   2040837:	 search cache=/etc/ld.so.cache
+   2040837:	  trying file=/lib/x86_64-linux-gnu/libc.so.6
+   2040837:
+   2040837:	find library=libstdc++.so.6 [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libstdc++.so.6
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libstdc++.so.6
+   2040837:	 search cache=/etc/ld.so.cache
+   2040837:	  trying file=/lib/x86_64-linux-gnu/libstdc++.so.6
+   2040837:
+   2040837:	find library=libgcc_s.so.1 [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libgcc_s.so.1
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libgcc_s.so.1
+   2040837:	 search cache=/etc/ld.so.cache
+   2040837:	  trying file=/lib/x86_64-linux-gnu/libgcc_s.so.1
+   2040837:
+   2040837:	find library=libpthread.so.0 [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libpthread.so.0
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libpthread.so.0
+   2040837:	 search cache=/etc/ld.so.cache
+   2040837:	  trying file=/lib/x86_64-linux-gnu/libpthread.so.0
+   2040837:
+   2040837:	find library=libdl.so.2 [0]; searching
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libdl.so.2
+   2040837:	 search path=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative		(LD_LIBRARY_PATH)
+   2040837:	  trying file=/root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libdl.so.2
+   2040837:	 search cache=/etc/ld.so.cache
+   2040837:	  trying file=/lib/x86_64-linux-gnu/libdl.so.2
+   2040837:
+   2040837:
+   2040837:	calling init: /lib64/ld-linux-x86-64.so.2
+   2040837:
+   2040837:
+   2040837:	calling init: /lib/x86_64-linux-gnu/libc.so.6
+   2040837:
+   2040837:
+   2040837:	calling init: /lib/x86_64-linux-gnu/libdl.so.2
+   2040837:
+   2040837:
+   2040837:	calling init: /lib/x86_64-linux-gnu/libpthread.so.0
+   2040837:
+   2040837:
+   2040837:	calling init: /lib/x86_64-linux-gnu/libgcc_s.so.1
+   2040837:
+   2040837:
+   2040837:	calling init: /lib/x86_64-linux-gnu/libm.so.6
+   2040837:
+   2040837:
+   2040837:	calling init: /lib/x86_64-linux-gnu/libstdc++.so.6
+   2040837:
+   2040837:
+   2040837:	calling init: /root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libboundscheck.so
+   2040837:
+   2040837:
+   2040837:	calling init: /root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libcangjie-runtime.so
+   2040837:
+   2040837:
+   2040837:	initialize program: /root/.cache/cjr-research-linux/artifacts/1.1.3/probe-default-stripped
+   2040837:
+   2040837:
+   2040837:	transferring control: /root/.cache/cjr-research-linux/artifacts/1.1.3/probe-default-stripped
+   2040837:
+   2040837:
+   2040837:	calling fini:  [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libcangjie-runtime.so [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /root/.cache/cjr-research-linux/1.1.3/cangjie/runtime/lib/linux_x86_64_cjnative/libboundscheck.so [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /lib/x86_64-linux-gnu/libstdc++.so.6 [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /lib/x86_64-linux-gnu/libm.so.6 [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /lib/x86_64-linux-gnu/libgcc_s.so.1 [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /lib/x86_64-linux-gnu/libpthread.so.0 [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /lib/x86_64-linux-gnu/libdl.so.2 [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /lib/x86_64-linux-gnu/libc.so.6 [0]
+   2040837:
+   2040837:
+   2040837:	calling fini: /lib64/ld-linux-x86-64.so.2 [0]
+   2040837:

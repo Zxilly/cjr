@@ -1,0 +1,1010 @@
+{
+  "host": "Windows x64",
+  "manifest_sha256": "6ddbeb51f29361738f292456f6c18b20390752a92ea99016fb149cb9becae364",
+  "sdks": [
+    {
+      "version": "1.0.5",
+      "source": "existing-research-archive",
+      "archive_sha256": "08c6c1dd0de73396f63ac85085d635e79ce84fef98d330cb00869b4fc8f1cb2e",
+      "archive_bytes": 297274602,
+      "sdk_root": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie"
+    },
+    {
+      "version": "1.1.3",
+      "source": "existing-research-archive",
+      "archive_sha256": "8bb65499c1b30271eaca422568bc9537677bd25debd8f5208e780a22c917da72",
+      "archive_bytes": 392128226,
+      "sdk_root": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie"
+    },
+    {
+      "version": "1.2.0",
+      "source": "cjv-verified-archive-cache",
+      "archive_sha256": "7bd5088ad56fb03c1214e73ea076de5ac08580cc419a8cbd46a524ee1ca250bf",
+      "archive_bytes": 262872802,
+      "sdk_root": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie"
+    }
+  ],
+  "builds": [
+    {
+      "sdk": "1.0.5",
+      "mode": "default",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.0.5\\default\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5"
+        ],
+        "imports": [
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll",
+          "libboundscheck.dll"
+        ],
+        "sha256": "b02b681659b2652bfd6e8403a40c83185d50c95ebbaf91432ad44d405c10da11"
+      }
+    },
+    {
+      "sdk": "1.0.5",
+      "mode": "dynamic-std",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--dy-std",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.0.5\\dynamic-std\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.0.5"
+        ],
+        "imports": [
+          "libcangjie-std-collection.dll",
+          "libcangjie-std-sync.dll",
+          "libcangjie-std-core.dll",
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll"
+        ],
+        "sha256": "6f2161d62a46be258b21c08966d626382907db31539fe80504f4307817d26504"
+      }
+    },
+    {
+      "sdk": "1.0.5",
+      "mode": "stripped",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--dy-std",
+        "-s",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.0.5\\stripped\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.0.5"
+        ],
+        "imports": [
+          "libcangjie-std-collection.dll",
+          "libcangjie-std-sync.dll",
+          "libcangjie-std-core.dll",
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll"
+        ],
+        "sha256": "37393114670ce3f0f993c44b76875b866285d86bf4a5dc242bd8c69765b7e8a1"
+      }
+    },
+    {
+      "sdk": "1.0.5",
+      "mode": "static",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--static",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.0.5\\static\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning: '--static' option has only effect on Linux targets.\nwarning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5",
+          "1.0.5"
+        ],
+        "imports": [
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll",
+          "libboundscheck.dll"
+        ],
+        "sha256": "8f4f4133d5c7692165d4c67fbc2b8c76224ee18fdcaba567e981004dce28b8cd"
+      }
+    },
+    {
+      "sdk": "1.1.3",
+      "mode": "default",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.1.3\\default\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3"
+        ],
+        "imports": [
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll",
+          "libboundscheck.dll"
+        ],
+        "sha256": "fff11e79381dfad456e5b292f5ebdbead4ddedbab928dbcafc899141887925f7"
+      }
+    },
+    {
+      "sdk": "1.1.3",
+      "mode": "dynamic-std",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--dy-std",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.1.3\\dynamic-std\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.1.3"
+        ],
+        "imports": [
+          "libcangjie-std-collection.dll",
+          "libcangjie-std-sync.dll",
+          "libcangjie-std-core.dll",
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll"
+        ],
+        "sha256": "070cf5edf528ccb29f7246e13c3a5b3e4a4c22c672973845c6baa5b6ff52bea0"
+      }
+    },
+    {
+      "sdk": "1.1.3",
+      "mode": "stripped",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--dy-std",
+        "-s",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.1.3\\stripped\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.1.3"
+        ],
+        "imports": [
+          "libcangjie-std-collection.dll",
+          "libcangjie-std-sync.dll",
+          "libcangjie-std-core.dll",
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll"
+        ],
+        "sha256": "519cc655dd53dd8857c1edb0f1865f3944b1169d3cd7d486c05df4990d58202f"
+      }
+    },
+    {
+      "sdk": "1.1.3",
+      "mode": "static",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--static",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.1.3\\static\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3",
+          "1.1.3"
+        ],
+        "imports": [
+          "msvcrt.dll",
+          "KERNEL32.dll",
+          "dbghelp.dll",
+          "WS2_32.dll"
+        ],
+        "sha256": "96e0d726d51d9284f82bc5013b250153c1a95d78c98e6da5d9be57ffe5bae43d"
+      }
+    },
+    {
+      "sdk": "1.2.0",
+      "mode": "default",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.2.0\\default\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0"
+        ],
+        "imports": [
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll",
+          "libboundscheck.dll"
+        ],
+        "sha256": "d7dcb9456191194ca6255f1bfbdb2b35cd01ff4c454e92d192cfeecf32365bda"
+      }
+    },
+    {
+      "sdk": "1.2.0",
+      "mode": "dynamic-std",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--dy-std",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.2.0\\dynamic-std\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.2.0"
+        ],
+        "imports": [
+          "libcangjie-std-sync.dll",
+          "libcangjie-std-collection.dll",
+          "libcangjie-std-core.dll",
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll"
+        ],
+        "sha256": "63248315e2243fb9e5fc278bc6a05fbd8cd346fb003137b71a10eea32b00c8f2"
+      }
+    },
+    {
+      "sdk": "1.2.0",
+      "mode": "stripped",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--dy-std",
+        "-s",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.2.0\\stripped\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.2.0"
+        ],
+        "imports": [
+          "libcangjie-std-sync.dll",
+          "libcangjie-std-collection.dll",
+          "libcangjie-std-core.dll",
+          "libcangjie-runtime.dll",
+          "msvcrt.dll",
+          "KERNEL32.dll"
+        ],
+        "sha256": "b2fbb48ee6994caa03fd610869b008e82edcee21c346b29541cf1a3a0e661c6e"
+      }
+    },
+    {
+      "sdk": "1.2.0",
+      "mode": "static",
+      "command": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\bin\\cjc.exe",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj",
+        "--static",
+        "-o",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.2.0\\static\\workload.exe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning\u001b[0m: unused import 'std.sync.*'\n ==> E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\workload.cj:2:1:\n  | \n2 | import std.sync.*\n  | ^^^^^^^^^^^^^^^^^ unused import\n  | \n  # note: this warning can be suppressed by setting the compiler option `-Woff unused`\n\n1 warning generated, 1 warning printed.\n",
+      "pe": {
+        "versions": [
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0",
+          "1.2.0"
+        ],
+        "imports": [
+          "msvcrt.dll",
+          "KERNEL32.dll",
+          "dbghelp.dll",
+          "WS2_32.dll"
+        ],
+        "sha256": "25ebf907e1b11314b8199f9616533dbf2515b182ff116f18e7f51d5943849967"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "build_sdk": "1.0.5",
+      "mode": "default",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "default",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll"
+      ],
+      "seconds": 1.109
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "default",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "default",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "dynamic-std",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.047
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll"
+      ],
+      "seconds": 1.11
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "stripped",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "stripped",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll"
+      ],
+      "seconds": 1.094
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "stripped",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.047
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "stripped",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "static",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.125
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "static",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.0.5\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll"
+      ],
+      "seconds": 1.141
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "static",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.0.5",
+      "mode": "static",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "default",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.078
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "default",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 3221225785,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "default",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll"
+      ],
+      "seconds": 1.109
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "default",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll"
+      ],
+      "seconds": 1.094
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "dynamic-std",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 3221225785,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.109
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.078
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "stripped",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.078
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "stripped",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 3221225785,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.047
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "stripped",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll"
+      ],
+      "seconds": 1.094
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "stripped",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll"
+      ],
+      "seconds": 1.078
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "static",
+      "runtime_sdk": null,
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.281
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "static",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.219
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "static",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.219
+    },
+    {
+      "build_sdk": "1.1.3",
+      "mode": "static",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 3221225477,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.203
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "default",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.078
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "default",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 3221225785,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "default",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll"
+      ],
+      "seconds": 1.094
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "default",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll"
+      ],
+      "seconds": 1.109
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "dynamic-std",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.063
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 3221225785,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.11
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "dynamic-std",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll"
+      ],
+      "seconds": 1.078
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "stripped",
+      "runtime_sdk": null,
+      "exit_code": 3221225781,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.062
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "stripped",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 3221225785,
+      "stdout": "",
+      "stderr": "",
+      "modules": [],
+      "seconds": 0.047
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "stripped",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.1.3\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll"
+      ],
+      "seconds": 1.11
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "stripped",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\sdks\\1.2.0\\cangjie\\runtime\\lib\\windows_x86_64_cjnative\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.078
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "static",
+      "runtime_sdk": null,
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [],
+      "seconds": 1.125
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "static",
+      "runtime_sdk": "1.0.5",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [],
+      "seconds": 1.078
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "static",
+      "runtime_sdk": "1.1.3",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [],
+      "seconds": 1.125
+    },
+    {
+      "build_sdk": "1.2.0",
+      "mode": "static",
+      "runtime_sdk": "1.2.0",
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [],
+      "seconds": 1.11
+    }
+  ],
+  "shadowing": {
+    "exit_code": 3221225785,
+    "stdout": "",
+    "stderr": "",
+    "modules": [],
+    "seconds": 0.125
+  }
+}

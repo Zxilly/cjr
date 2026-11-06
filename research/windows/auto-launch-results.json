@@ -1,0 +1,181 @@
+[
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.0.5\\default\\workload.exe",
+    "detected_sdk": "1.0.5",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-runtime.dll"
+      ],
+      "seconds": 1.094
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.0.5\\dynamic-std\\workload.exe",
+    "detected_sdk": "1.0.5",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-convert.dll"
+      ],
+      "seconds": 1.125
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.0.5\\stripped\\workload.exe",
+    "detected_sdk": "1.0.5",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.0.5\\libcangjie-std-convert.dll"
+      ],
+      "seconds": 1.094
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.1.3\\default\\workload.exe",
+    "detected_sdk": "1.1.3",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-runtime.dll"
+      ],
+      "seconds": 1.125
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.1.3\\dynamic-std\\workload.exe",
+    "detected_sdk": "1.1.3",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.11
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.1.3\\stripped\\workload.exe",
+    "detected_sdk": "1.1.3",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.1.3\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.094
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.2.0\\default\\workload.exe",
+    "detected_sdk": "1.2.0",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-runtime.dll"
+      ],
+      "seconds": 1.109
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.2.0\\dynamic-std\\workload.exe",
+    "detected_sdk": "1.2.0",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.11
+    }
+  },
+  {
+    "binary": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\builds\\1.2.0\\stripped\\workload.exe",
+    "detected_sdk": "1.2.0",
+    "selected_runtime": "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0",
+    "outcome": {
+      "exit_code": 0,
+      "stdout": "PASS collections exceptions threads allocations",
+      "stderr": "",
+      "modules": [
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-collection.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-runtime.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-core.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-sync.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-math.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libboundscheck.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-time.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-convert.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-io.dll",
+        "E:\\Project\\CS_Project\\2026\\cjr\\research\\windows\\runtimes\\1.2.0\\libcangjie-std-binary.dll"
+      ],
+      "seconds": 1.094
+    }
+  }
+]

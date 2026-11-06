@@ -1,0 +1,1530 @@
+{
+  "clap": {
+    "version": "4.6.7",
+    "rust_version": "1.85",
+    "published": "2026-09-14T18:40:28.474794Z",
+    "features": {
+      "cargo": [
+        "clap_builder/cargo"
+      ],
+      "color": [
+        "clap_builder/color"
+      ],
+      "debug": [
+        "clap_builder/debug",
+        "clap_derive?/debug"
+      ],
+      "default": [
+        "std",
+        "color",
+        "help",
+        "usage",
+        "error-context",
+        "suggestions"
+      ],
+      "deprecated": [
+        "clap_builder/deprecated",
+        "clap_derive?/deprecated"
+      ],
+      "derive": [
+        "dep:clap_derive"
+      ],
+      "env": [
+        "clap_builder/env"
+      ],
+      "error-context": [
+        "clap_builder/error-context"
+      ],
+      "help": [
+        "clap_builder/help"
+      ],
+      "std": [
+        "clap_builder/std"
+      ],
+      "string": [
+        "clap_builder/string"
+      ],
+      "suggestions": [
+        "clap_builder/suggestions"
+      ],
+      "unicode": [
+        "clap_builder/unicode"
+      ],
+      "unstable-derive-ui-tests": [],
+      "unstable-doc": [
+        "clap_builder/unstable-doc",
+        "derive"
+      ],
+      "unstable-ext": [
+        "clap_builder/unstable-ext"
+      ],
+      "unstable-markdown": [
+        "clap_derive/unstable-markdown"
+      ],
+      "unstable-styles": [
+        "clap_builder/unstable-styles"
+      ],
+      "unstable-v5": [
+        "clap_builder/unstable-v5",
+        "clap_derive?/unstable-v5",
+        "deprecated"
+      ],
+      "usage": [
+        "clap_builder/usage"
+      ],
+      "wrap_help": [
+        "clap_builder/wrap_help"
+      ]
+    },
+    "repository": "https://github.com/clap-rs/clap"
+  },
+  "object": {
+    "version": "0.40.0",
+    "rust_version": "1.85",
+    "published": "2026-08-01T08:06:55.680121Z",
+    "features": {
+      "all": [
+        "read",
+        "write",
+        "build",
+        "std",
+        "compression",
+        "names",
+        "wasm"
+      ],
+      "archive": [],
+      "build": [
+        "build_core",
+        "write_std",
+        "elf"
+      ],
+      "build_core": [
+        "read_core",
+        "write_core"
+      ],
+      "cargo-all": [],
+      "coff": [],
+      "compression": [
+        "dep:flate2",
+        "dep:ruzstd",
+        "std"
+      ],
+      "default": [
+        "read",
+        "compression"
+      ],
+      "doc": [
+        "all"
+      ],
+      "elf": [],
+      "goff": [],
+      "macho": [],
+      "names": [],
+      "pe": [
+        "coff"
+      ],
+      "read": [
+        "read_core",
+        "archive",
+        "coff",
+        "elf",
+        "macho",
+        "pe",
+        "xcoff"
+      ],
+      "read_core": [],
+      "rustc-dep-of-std": [
+        "core",
+        "alloc",
+        "memchr/rustc-dep-of-std"
+      ],
+      "std": [
+        "memchr/std"
+      ],
+      "unaligned": [],
+      "unstable": [],
+      "unstable-all": [
+        "all",
+        "unstable",
+        "goff"
+      ],
+      "wasm": [
+        "dep:wasmparser"
+      ],
+      "write": [
+        "write_std",
+        "coff",
+        "elf",
+        "macho",
+        "pe",
+        "xcoff"
+      ],
+      "write_core": [
+        "dep:crc32fast",
+        "dep:indexmap",
+        "dep:hashbrown"
+      ],
+      "write_std": [
+        "write_core",
+        "std",
+        "indexmap?/std",
+        "crc32fast?/std"
+      ],
+      "xcoff": []
+    },
+    "repository": "https://github.com/gimli-rs/object"
+  },
+  "serde": {
+    "version": "1.0.229",
+    "rust_version": "1.56",
+    "published": "2026-07-18T23:05:13.266456Z",
+    "features": {
+      "alloc": [
+        "serde_core/alloc"
+      ],
+      "default": [
+        "std"
+      ],
+      "derive": [
+        "serde_derive"
+      ],
+      "rc": [
+        "serde_core/rc"
+      ],
+      "std": [
+        "serde_core/std"
+      ],
+      "unstable": [
+        "serde_core/unstable"
+      ]
+    },
+    "repository": "https://github.com/serde-rs/serde"
+  },
+  "serde_json": {
+    "version": "1.0.154",
+    "rust_version": "1.71",
+    "published": "2026-10-11T15:31:46.076577Z",
+    "features": {
+      "alloc": [
+        "serde_core/alloc"
+      ],
+      "arbitrary_precision": [],
+      "default": [
+        "std"
+      ],
+      "float_roundtrip": [],
+      "preserve_order": [
+        "indexmap",
+        "alloc",
+        "dep:foldhash"
+      ],
+      "raw_value": [],
+      "std": [
+        "memchr/std",
+        "serde_core/std"
+      ],
+      "unbounded_depth": []
+    },
+    "repository": "https://github.com/serde-rs/json"
+  },
+  "toml": {
+    "version": "1.2.1+spec-1.1.0",
+    "rust_version": "1.85",
+    "published": "2026-11-06T13:52:01.467558Z",
+    "features": {
+      "debug": [
+        "std",
+        "toml_parser?/debug",
+        "dep:anstream",
+        "dep:anstyle"
+      ],
+      "default": [
+        "std",
+        "serde",
+        "parse",
+        "display"
+      ],
+      "display": [
+        "dep:toml_writer"
+      ],
+      "fast_hash": [
+        "preserve_order",
+        "dep:foldhash"
+      ],
+      "parse": [
+        "dep:toml_parser",
+        "dep:winnow"
+      ],
+      "preserve_order": [
+        "dep:indexmap",
+        "std"
+      ],
+      "serde": [
+        "dep:serde_core",
+        "toml_datetime/serde",
+        "serde_spanned/serde"
+      ],
+      "std": [
+        "indexmap?/std",
+        "serde_core?/std",
+        "toml_parser?/std",
+        "toml_writer?/std",
+        "toml_datetime/std",
+        "serde_spanned/std"
+      ],
+      "unbounded": []
+    },
+    "repository": "https://github.com/toml-rs/toml"
+  },
+  "reqwest": {
+    "version": "0.13.5",
+    "rust_version": "1.85.0",
+    "published": "2026-09-08T20:55:26.479356Z",
+    "features": {
+      "__native-tls": [
+        "dep:hyper-tls",
+        "dep:native-tls-crate",
+        "__tls",
+        "dep:tokio-native-tls"
+      ],
+      "__native-tls-alpn": [
+        "native-tls-crate?/alpn",
+        "hyper-tls?/alpn"
+      ],
+      "__rustls": [
+        "dep:hyper-rustls",
+        "dep:tokio-rustls",
+        "dep:rustls",
+        "__tls"
+      ],
+      "__rustls-aws-lc-rs": [
+        "hyper-rustls?/aws-lc-rs",
+        "tokio-rustls?/aws-lc-rs",
+        "rustls?/aws-lc-rs",
+        "quinn?/rustls-aws-lc-rs"
+      ],
+      "__tls": [
+        "dep:rustls-pki-types",
+        "tokio/io-util"
+      ],
+      "blocking": [
+        "dep:futures-channel",
+        "futures-channel?/sink",
+        "dep:futures-util",
+        "futures-util?/io",
+        "futures-util?/sink",
+        "tokio/sync"
+      ],
+      "brotli": [
+        "tower-http/decompression-br"
+      ],
+      "charset": [
+        "dep:encoding_rs",
+        "dep:mime"
+      ],
+      "cookies": [
+        "dep:cookie_crate",
+        "dep:cookie_store"
+      ],
+      "default": [
+        "default-tls",
+        "charset",
+        "http2",
+        "system-proxy"
+      ],
+      "default-tls": [
+        "rustls"
+      ],
+      "deflate": [
+        "tower-http/decompression-deflate"
+      ],
+      "form": [
+        "dep:serde",
+        "dep:serde_urlencoded"
+      ],
+      "gzip": [
+        "tower-http/decompression-gzip"
+      ],
+      "hickory-dns": [
+        "dep:hickory-resolver",
+        "dep:once_cell"
+      ],
+      "http2": [
+        "dep:h2",
+        "hyper/http2",
+        "hyper-util/http2",
+        "hyper-rustls?/http2"
+      ],
+      "http3": [
+        "rustls",
+        "dep:h3",
+        "dep:h3-quinn",
+        "dep:quinn",
+        "tokio/macros"
+      ],
+      "json": [
+        "dep:serde",
+        "dep:serde_json"
+      ],
+      "multipart": [
+        "dep:mime_guess",
+        "dep:futures-util"
+      ],
+      "native-tls": [
+        "__native-tls",
+        "__native-tls-alpn"
+      ],
+      "native-tls-no-alpn": [
+        "__native-tls"
+      ],
+      "native-tls-vendored": [
+        "__native-tls",
+        "native-tls-crate?/vendored",
+        "__native-tls-alpn"
+      ],
+      "native-tls-vendored-no-alpn": [
+        "__native-tls",
+        "native-tls-crate?/vendored"
+      ],
+      "query": [
+        "dep:serde",
+        "dep:serde_urlencoded"
+      ],
+      "rustls": [
+        "__rustls-aws-lc-rs",
+        "dep:rustls-platform-verifier",
+        "__rustls"
+      ],
+      "rustls-no-provider": [
+        "dep:rustls-platform-verifier",
+        "__rustls"
+      ],
+      "socks": [],
+      "stream": [
+        "tokio/fs",
+        "dep:futures-util",
+        "dep:tokio-util",
+        "dep:wasm-streams"
+      ],
+      "system-proxy": [
+        "hyper-util/client-proxy-system"
+      ],
+      "zstd": [
+        "tower-http/decompression-zstd"
+      ]
+    },
+    "repository": "https://github.com/seanmonstar/reqwest"
+  },
+  "zip": {
+    "version": "9.4.1",
+    "rust_version": "1.88",
+    "published": "2026-11-06T04:33:19.743219Z",
+    "features": {
+      "_arbitrary": [
+        "dep:arbitrary"
+      ],
+      "_bzip2_any": [],
+      "_deflate-any": [],
+      "_miri_compatible_features": [
+        "bzip2",
+        "chrono",
+        "deflate-flate2",
+        "flate2/rust_backend",
+        "deflate-zopfli",
+        "jiff-02",
+        "legacy-zip",
+        "lzma",
+        "nt-time",
+        "ppmd",
+        "unreserved",
+        "xz",
+        "time"
+      ],
+      "aes-crypto": [
+        "dep:aes",
+        "dep:constant_time_eq",
+        "getrandom/std",
+        "dep:hmac",
+        "dep:pbkdf2",
+        "dep:sha1",
+        "dep:zeroize"
+      ],
+      "bzip2": [
+        "dep:bzip2",
+        "bzip2/default",
+        "_bzip2_any"
+      ],
+      "bzip2-rs": [
+        "dep:bzip2",
+        "bzip2/bzip2-sys",
+        "_bzip2_any"
+      ],
+      "chrono": [
+        "dep:chrono"
+      ],
+      "default": [
+        "aes-crypto",
+        "bzip2",
+        "deflate64",
+        "deflate",
+        "lzma",
+        "ppmd",
+        "time",
+        "zstd",
+        "xz"
+      ],
+      "deflate": [
+        "deflate-zopfli",
+        "deflate-flate2-zlib-rs"
+      ],
+      "deflate-flate2": [
+        "_deflate-any",
+        "dep:flate2"
+      ],
+      "deflate-flate2-zlib": [
+        "deflate-flate2",
+        "flate2/zlib"
+      ],
+      "deflate-flate2-zlib-ng": [
+        "deflate-flate2",
+        "flate2/zlib-ng"
+      ],
+      "deflate-flate2-zlib-ng-compat": [
+        "deflate-flate2",
+        "flate2/zlib-ng-compat"
+      ],
+      "deflate-flate2-zlib-rs": [
+        "deflate-flate2",
+        "flate2/zlib-rs"
+      ],
+      "deflate-zopfli": [
+        "dep:zopfli",
+        "_deflate-any"
+      ],
+      "getrandom": [],
+      "jiff-02": [
+        "dep:jiff"
+      ],
+      "legacy-zip": [
+        "bitstream-io"
+      ],
+      "lzma": [
+        "dep:lzma-rust2"
+      ],
+      "nt-time": [
+        "dep:nt-time"
+      ],
+      "ppmd": [
+        "dep:ppmd-rust"
+      ],
+      "rayon": [
+        "dep:rayon"
+      ],
+      "time": [
+        "dep:time"
+      ],
+      "unreserved": [],
+      "xz": [
+        "dep:lzma-rust2"
+      ],
+      "zstd": [
+        "dep:zstd"
+      ]
+    },
+    "repository": "https://github.com/zip-rs/zip2"
+  },
+  "tar": {
+    "version": "0.4.46",
+    "rust_version": "1.63",
+    "published": "2026-05-18T19:12:11.033813Z",
+    "features": {
+      "default": [
+        "xattr"
+      ]
+    },
+    "repository": "https://github.com/composefs/tar-rs"
+  },
+  "flate2": {
+    "version": "1.1.11",
+    "rust_version": "1.67.0",
+    "published": "2026-11-06T09:20:41.620132Z",
+    "features": {
+      "any_c_zlib": [
+        "any_zlib"
+      ],
+      "any_impl": [],
+      "any_zlib": [
+        "any_impl"
+      ],
+      "cloudflare_zlib": [
+        "zlib"
+      ],
+      "default": [
+        "rust_backend",
+        "runtime_detection"
+      ],
+      "miniz-sys": [
+        "rust_backend"
+      ],
+      "miniz_oxide": [
+        "any_impl",
+        "dep:miniz_oxide",
+        "dep:crc32fast"
+      ],
+      "runtime_detection": [
+        "zlib-rs?/std",
+        "crc32fast?/std"
+      ],
+      "rust_backend": [
+        "miniz_oxide",
+        "any_impl"
+      ],
+      "zlib": [
+        "any_c_zlib",
+        "libz-sys",
+        "dep:crc32fast"
+      ],
+      "zlib-default": [
+        "any_c_zlib",
+        "libz-sys/default",
+        "dep:crc32fast"
+      ],
+      "zlib-ng": [
+        "any_c_zlib",
+        "libz-ng-sys",
+        "dep:crc32fast"
+      ],
+      "zlib-ng-compat": [
+        "zlib",
+        "libz-sys/zlib-ng",
+        "dep:crc32fast"
+      ],
+      "zlib-rs": [
+        "any_zlib",
+        "dep:zlib-rs"
+      ]
+    },
+    "repository": "https://github.com/rust-lang/flate2-rs"
+  },
+  "sha2": {
+    "version": "0.11.1",
+    "rust_version": "1.88",
+    "published": "2026-10-12T18:58:22.836567Z",
+    "features": {
+      "alloc": [
+        "digest/alloc"
+      ],
+      "default": [
+        "alloc",
+        "oid"
+      ],
+      "oid": [
+        "digest/oid"
+      ],
+      "zeroize": [
+        "digest/zeroize"
+      ]
+    },
+    "repository": "https://github.com/RustCrypto/hashes"
+  },
+  "tempfile": {
+    "version": "3.27.0",
+    "rust_version": "1.63",
+    "published": "2026-03-11T00:20:04.812840Z",
+    "features": {
+      "default": [
+        "getrandom"
+      ],
+      "nightly": []
+    },
+    "repository": "https://github.com/Stebalien/tempfile"
+  },
+  "semver": {
+    "version": "1.0.28",
+    "rust_version": "1.68",
+    "published": "2026-04-04T00:25:14.379075Z",
+    "features": {
+      "default": [
+        "std"
+      ],
+      "serde": [
+        "dep:serde"
+      ],
+      "std": []
+    },
+    "repository": "https://github.com/dtolnay/semver"
+  },
+  "thiserror": {
+    "version": "2.0.21",
+    "rust_version": "1.77",
+    "published": "2026-09-23T20:24:07.771104Z",
+    "features": {
+      "default": [
+        "std"
+      ],
+      "std": []
+    },
+    "repository": "https://github.com/dtolnay/thiserror"
+  },
+  "tracing": {
+    "version": "0.1.44",
+    "rust_version": "1.65.0",
+    "published": "2025-12-18T14:26:12.360139Z",
+    "features": {
+      "async-await": [],
+      "attributes": [
+        "tracing-attributes"
+      ],
+      "default": [
+        "std",
+        "attributes"
+      ],
+      "log-always": [
+        "log"
+      ],
+      "max_level_debug": [],
+      "max_level_error": [],
+      "max_level_info": [],
+      "max_level_off": [],
+      "max_level_trace": [],
+      "max_level_warn": [],
+      "release_max_level_debug": [],
+      "release_max_level_error": [],
+      "release_max_level_info": [],
+      "release_max_level_off": [],
+      "release_max_level_trace": [],
+      "release_max_level_warn": [],
+      "std": [
+        "tracing-core/std"
+      ],
+      "valuable": [
+        "tracing-core/valuable"
+      ]
+    },
+    "repository": "https://github.com/tokio-rs/tracing"
+  },
+  "windows-sys": {
+    "version": "0.61.2",
+    "rust_version": "1.71",
+    "published": "2025-10-06T19:18:30.163595Z",
+    "features": {
+      "Wdk": [
+        "Win32_Foundation"
+      ],
+      "Wdk_Devices": [
+        "Wdk"
+      ],
+      "Wdk_Devices_Bluetooth": [
+        "Wdk_Devices"
+      ],
+      "Wdk_Devices_HumanInterfaceDevice": [
+        "Wdk_Devices"
+      ],
+      "Wdk_Foundation": [
+        "Wdk"
+      ],
+      "Wdk_Graphics": [
+        "Wdk"
+      ],
+      "Wdk_Graphics_Direct3D": [
+        "Wdk_Graphics"
+      ],
+      "Wdk_NetworkManagement": [
+        "Wdk"
+      ],
+      "Wdk_NetworkManagement_Ndis": [
+        "Wdk_NetworkManagement"
+      ],
+      "Wdk_NetworkManagement_WindowsFilteringPlatform": [
+        "Wdk_NetworkManagement"
+      ],
+      "Wdk_Storage": [
+        "Wdk"
+      ],
+      "Wdk_Storage_FileSystem": [
+        "Wdk_Storage"
+      ],
+      "Wdk_Storage_FileSystem_Minifilters": [
+        "Wdk_Storage_FileSystem"
+      ],
+      "Wdk_System": [
+        "Wdk"
+      ],
+      "Wdk_System_IO": [
+        "Wdk_System"
+      ],
+      "Wdk_System_Memory": [
+        "Wdk_System"
+      ],
+      "Wdk_System_OfflineRegistry": [
+        "Wdk_System"
+      ],
+      "Wdk_System_Registry": [
+        "Wdk_System"
+      ],
+      "Wdk_System_SystemInformation": [
+        "Wdk_System"
+      ],
+      "Wdk_System_SystemServices": [
+        "Wdk_System"
+      ],
+      "Wdk_System_Threading": [
+        "Wdk_System"
+      ],
+      "Win32": [
+        "Win32_Foundation"
+      ],
+      "Win32_Data": [
+        "Win32"
+      ],
+      "Win32_Data_HtmlHelp": [
+        "Win32_Data"
+      ],
+      "Win32_Data_RightsManagement": [
+        "Win32_Data"
+      ],
+      "Win32_Devices": [
+        "Win32"
+      ],
+      "Win32_Devices_AllJoyn": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Beep": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_BiometricFramework": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Bluetooth": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Cdrom": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Communication": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_DeviceAndDriverInstallation": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_DeviceQuery": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Display": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Dvd": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Enumeration": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Enumeration_Pnp": [
+        "Win32_Devices_Enumeration"
+      ],
+      "Win32_Devices_Fax": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_HumanInterfaceDevice": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Nfc": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Nfp": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_PortableDevices": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Properties": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Pwm": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Sensors": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_SerialCommunication": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Tapi": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_Usb": [
+        "Win32_Devices"
+      ],
+      "Win32_Devices_WebServicesOnDevices": [
+        "Win32_Devices"
+      ],
+      "Win32_Foundation": [
+        "Win32"
+      ],
+      "Win32_Gaming": [
+        "Win32"
+      ],
+      "Win32_Globalization": [
+        "Win32"
+      ],
+      "Win32_Graphics": [
+        "Win32"
+      ],
+      "Win32_Graphics_Dwm": [
+        "Win32_Graphics"
+      ],
+      "Win32_Graphics_Gdi": [
+        "Win32_Graphics"
+      ],
+      "Win32_Graphics_GdiPlus": [
+        "Win32_Graphics"
+      ],
+      "Win32_Graphics_Hlsl": [
+        "Win32_Graphics"
+      ],
+      "Win32_Graphics_OpenGL": [
+        "Win32_Graphics"
+      ],
+      "Win32_Graphics_Printing": [
+        "Win32_Graphics"
+      ],
+      "Win32_Graphics_Printing_PrintTicket": [
+        "Win32_Graphics_Printing"
+      ],
+      "Win32_Management": [
+        "Win32"
+      ],
+      "Win32_Management_MobileDeviceManagementRegistration": [
+        "Win32_Management"
+      ],
+      "Win32_Media": [
+        "Win32"
+      ],
+      "Win32_Media_Audio": [
+        "Win32_Media"
+      ],
+      "Win32_Media_DxMediaObjects": [
+        "Win32_Media"
+      ],
+      "Win32_Media_KernelStreaming": [
+        "Win32_Media"
+      ],
+      "Win32_Media_Multimedia": [
+        "Win32_Media"
+      ],
+      "Win32_Media_Streaming": [
+        "Win32_Media"
+      ],
+      "Win32_Media_WindowsMediaFormat": [
+        "Win32_Media"
+      ],
+      "Win32_NetworkManagement": [
+        "Win32"
+      ],
+      "Win32_NetworkManagement_Dhcp": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_Dns": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_InternetConnectionWizard": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_IpHelper": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_Multicast": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_Ndis": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_NetBios": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_NetManagement": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_NetShell": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_NetworkDiagnosticsFramework": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_P2P": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_QoS": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_Rras": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_Snmp": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_WNet": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_WebDav": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_WiFi": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_WindowsConnectionManager": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_WindowsFilteringPlatform": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_WindowsFirewall": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_NetworkManagement_WindowsNetworkVirtualization": [
+        "Win32_NetworkManagement"
+      ],
+      "Win32_Networking": [
+        "Win32"
+      ],
+      "Win32_Networking_ActiveDirectory": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_Clustering": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_HttpServer": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_Ldap": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_WebSocket": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_WinHttp": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_WinInet": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_WinSock": [
+        "Win32_Networking"
+      ],
+      "Win32_Networking_WindowsWebServices": [
+        "Win32_Networking"
+      ],
+      "Win32_Security": [
+        "Win32"
+      ],
+      "Win32_Security_AppLocker": [
+        "Win32_Security"
+      ],
+      "Win32_Security_Authentication": [
+        "Win32_Security"
+      ],
+      "Win32_Security_Authentication_Identity": [
+        "Win32_Security_Authentication"
+      ],
+      "Win32_Security_Authorization": [
+        "Win32_Security"
+      ],
+      "Win32_Security_Credentials": [
+        "Win32_Security"
+      ],
+      "Win32_Security_Cryptography": [
+        "Win32_Security"
+      ],
+      "Win32_Security_Cryptography_Catalog": [
+        "Win32_Security_Cryptography"
+      ],
+      "Win32_Security_Cryptography_Certificates": [
+        "Win32_Security_Cryptography"
+      ],
+      "Win32_Security_Cryptography_Sip": [
+        "Win32_Security_Cryptography"
+      ],
+      "Win32_Security_Cryptography_UI": [
+        "Win32_Security_Cryptography"
+      ],
+      "Win32_Security_DiagnosticDataQuery": [
+        "Win32_Security"
+      ],
+      "Win32_Security_DirectoryServices": [
+        "Win32_Security"
+      ],
+      "Win32_Security_EnterpriseData": [
+        "Win32_Security"
+      ],
+      "Win32_Security_ExtensibleAuthenticationProtocol": [
+        "Win32_Security"
+      ],
+      "Win32_Security_Isolation": [
+        "Win32_Security"
+      ],
+      "Win32_Security_LicenseProtection": [
+        "Win32_Security"
+      ],
+      "Win32_Security_NetworkAccessProtection": [
+        "Win32_Security"
+      ],
+      "Win32_Security_WinTrust": [
+        "Win32_Security"
+      ],
+      "Win32_Security_WinWlx": [
+        "Win32_Security"
+      ],
+      "Win32_Storage": [
+        "Win32"
+      ],
+      "Win32_Storage_Cabinets": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_CloudFilters": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Compression": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_DistributedFileSystem": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_FileHistory": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_FileSystem": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Imapi": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_IndexServer": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_InstallableFileSystems": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_IscsiDisc": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Jet": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Nvme": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_OfflineFiles": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_OperationRecorder": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Packaging": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Packaging_Appx": [
+        "Win32_Storage_Packaging"
+      ],
+      "Win32_Storage_ProjectedFileSystem": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_StructuredStorage": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Vhd": [
+        "Win32_Storage"
+      ],
+      "Win32_Storage_Xps": [
+        "Win32_Storage"
+      ],
+      "Win32_System": [
+        "Win32"
+      ],
+      "Win32_System_AddressBook": [
+        "Win32_System"
+      ],
+      "Win32_System_Antimalware": [
+        "Win32_System"
+      ],
+      "Win32_System_ApplicationInstallationAndServicing": [
+        "Win32_System"
+      ],
+      "Win32_System_ApplicationVerifier": [
+        "Win32_System"
+      ],
+      "Win32_System_ClrHosting": [
+        "Win32_System"
+      ],
+      "Win32_System_Com": [
+        "Win32_System"
+      ],
+      "Win32_System_Com_Marshal": [
+        "Win32_System_Com"
+      ],
+      "Win32_System_Com_StructuredStorage": [
+        "Win32_System_Com"
+      ],
+      "Win32_System_Com_Urlmon": [
+        "Win32_System_Com"
+      ],
+      "Win32_System_ComponentServices": [
+        "Win32_System"
+      ],
+      "Win32_System_Console": [
+        "Win32_System"
+      ],
+      "Win32_System_CorrelationVector": [
+        "Win32_System"
+      ],
+      "Win32_System_DataExchange": [
+        "Win32_System"
+      ],
+      "Win32_System_DeploymentServices": [
+        "Win32_System"
+      ],
+      "Win32_System_DeveloperLicensing": [
+        "Win32_System"
+      ],
+      "Win32_System_Diagnostics": [
+        "Win32_System"
+      ],
+      "Win32_System_Diagnostics_Ceip": [
+        "Win32_System_Diagnostics"
+      ],
+      "Win32_System_Diagnostics_Debug": [
+        "Win32_System_Diagnostics"
+      ],
+      "Win32_System_Diagnostics_Debug_Extensions": [
+        "Win32_System_Diagnostics_Debug"
+      ],
+      "Win32_System_Diagnostics_Etw": [
+        "Win32_System_Diagnostics"
+      ],
+      "Win32_System_Diagnostics_ProcessSnapshotting": [
+        "Win32_System_Diagnostics"
+      ],
+      "Win32_System_Diagnostics_ToolHelp": [
+        "Win32_System_Diagnostics"
+      ],
+      "Win32_System_Diagnostics_TraceLogging": [
+        "Win32_System_Diagnostics"
+      ],
+      "Win32_System_DistributedTransactionCoordinator": [
+        "Win32_System"
+      ],
+      "Win32_System_Environment": [
+        "Win32_System"
+      ],
+      "Win32_System_ErrorReporting": [
+        "Win32_System"
+      ],
+      "Win32_System_EventCollector": [
+        "Win32_System"
+      ],
+      "Win32_System_EventLog": [
+        "Win32_System"
+      ],
+      "Win32_System_EventNotificationService": [
+        "Win32_System"
+      ],
+      "Win32_System_GroupPolicy": [
+        "Win32_System"
+      ],
+      "Win32_System_HostCompute": [
+        "Win32_System"
+      ],
+      "Win32_System_HostComputeNetwork": [
+        "Win32_System"
+      ],
+      "Win32_System_HostComputeSystem": [
+        "Win32_System"
+      ],
+      "Win32_System_Hypervisor": [
+        "Win32_System"
+      ],
+      "Win32_System_IO": [
+        "Win32_System"
+      ],
+      "Win32_System_Iis": [
+        "Win32_System"
+      ],
+      "Win32_System_Ioctl": [
+        "Win32_System"
+      ],
+      "Win32_System_JobObjects": [
+        "Win32_System"
+      ],
+      "Win32_System_Js": [
+        "Win32_System"
+      ],
+      "Win32_System_Kernel": [
+        "Win32_System"
+      ],
+      "Win32_System_LibraryLoader": [
+        "Win32_System"
+      ],
+      "Win32_System_Mailslots": [
+        "Win32_System"
+      ],
+      "Win32_System_Mapi": [
+        "Win32_System"
+      ],
+      "Win32_System_Memory": [
+        "Win32_System"
+      ],
+      "Win32_System_Memory_NonVolatile": [
+        "Win32_System_Memory"
+      ],
+      "Win32_System_MessageQueuing": [
+        "Win32_System"
+      ],
+      "Win32_System_MixedReality": [
+        "Win32_System"
+      ],
+      "Win32_System_Ole": [
+        "Win32_System"
+      ],
+      "Win32_System_PasswordManagement": [
+        "Win32_System"
+      ],
+      "Win32_System_Performance": [
+        "Win32_System"
+      ],
+      "Win32_System_Performance_HardwareCounterProfiling": [
+        "Win32_System_Performance"
+      ],
+      "Win32_System_Pipes": [
+        "Win32_System"
+      ],
+      "Win32_System_Power": [
+        "Win32_System"
+      ],
+      "Win32_System_ProcessStatus": [
+        "Win32_System"
+      ],
+      "Win32_System_Recovery": [
+        "Win32_System"
+      ],
+      "Win32_System_Registry": [
+        "Win32_System"
+      ],
+      "Win32_System_RemoteDesktop": [
+        "Win32_System"
+      ],
+      "Win32_System_RemoteManagement": [
+        "Win32_System"
+      ],
+      "Win32_System_RestartManager": [
+        "Win32_System"
+      ],
+      "Win32_System_Restore": [
+        "Win32_System"
+      ],
+      "Win32_System_Rpc": [
+        "Win32_System"
+      ],
+      "Win32_System_Search": [
+        "Win32_System"
+      ],
+      "Win32_System_Search_Common": [
+        "Win32_System_Search"
+      ],
+      "Win32_System_SecurityCenter": [
+        "Win32_System"
+      ],
+      "Win32_System_Services": [
+        "Win32_System"
+      ],
+      "Win32_System_SetupAndMigration": [
+        "Win32_System"
+      ],
+      "Win32_System_Shutdown": [
+        "Win32_System"
+      ],
+      "Win32_System_StationsAndDesktops": [
+        "Win32_System"
+      ],
+      "Win32_System_SubsystemForLinux": [
+        "Win32_System"
+      ],
+      "Win32_System_SystemInformation": [
+        "Win32_System"
+      ],
+      "Win32_System_SystemServices": [
+        "Win32_System"
+      ],
+      "Win32_System_Threading": [
+        "Win32_System"
+      ],
+      "Win32_System_Time": [
+        "Win32_System"
+      ],
+      "Win32_System_TpmBaseServices": [
+        "Win32_System"
+      ],
+      "Win32_System_UserAccessLogging": [
+        "Win32_System"
+      ],
+      "Win32_System_Variant": [
+        "Win32_System"
+      ],
+      "Win32_System_VirtualDosMachines": [
+        "Win32_System"
+      ],
+      "Win32_System_WindowsProgramming": [
+        "Win32_System"
+      ],
+      "Win32_System_Wmi": [
+        "Win32_System"
+      ],
+      "Win32_UI": [
+        "Win32"
+      ],
+      "Win32_UI_Accessibility": [
+        "Win32_UI"
+      ],
+      "Win32_UI_ColorSystem": [
+        "Win32_UI"
+      ],
+      "Win32_UI_Controls": [
+        "Win32_UI"
+      ],
+      "Win32_UI_Controls_Dialogs": [
+        "Win32_UI_Controls"
+      ],
+      "Win32_UI_HiDpi": [
+        "Win32_UI"
+      ],
+      "Win32_UI_Input": [
+        "Win32_UI"
+      ],
+      "Win32_UI_Input_Ime": [
+        "Win32_UI_Input"
+      ],
+      "Win32_UI_Input_KeyboardAndMouse": [
+        "Win32_UI_Input"
+      ],
+      "Win32_UI_Input_Pointer": [
+        "Win32_UI_Input"
+      ],
+      "Win32_UI_Input_Touch": [
+        "Win32_UI_Input"
+      ],
+      "Win32_UI_Input_XboxController": [
+        "Win32_UI_Input"
+      ],
+      "Win32_UI_InteractionContext": [
+        "Win32_UI"
+      ],
+      "Win32_UI_Magnification": [
+        "Win32_UI"
+      ],
+      "Win32_UI_Shell": [
+        "Win32_UI"
+      ],
+      "Win32_UI_Shell_Common": [
+        "Win32_UI_Shell"
+      ],
+      "Win32_UI_Shell_PropertiesSystem": [
+        "Win32_UI_Shell"
+      ],
+      "Win32_UI_TabletPC": [
+        "Win32_UI"
+      ],
+      "Win32_UI_TextServices": [
+        "Win32_UI"
+      ],
+      "Win32_UI_WindowsAndMessaging": [
+        "Win32_UI"
+      ],
+      "Win32_Web": [
+        "Win32"
+      ],
+      "Win32_Web_InternetExplorer": [
+        "Win32_Web"
+      ],
+      "default": [],
+      "docs": []
+    },
+    "repository": "https://github.com/microsoft/windows-rs"
+  },
+  "libc": {
+    "version": "0.2.191",
+    "rust_version": "1.65",
+    "published": "2026-10-16T22:56:46.041660Z",
+    "features": {
+      "align": [],
+      "const-extern-fn": [],
+      "default": [
+        "std"
+      ],
+      "extra_traits": [],
+      "rustc-dep-of-std": [
+        "align",
+        "rustc-std-workspace-core"
+      ],
+      "std": [],
+      "use_std": [
+        "std"
+      ]
+    },
+    "repository": "https://github.com/rust-lang/libc"
+  },
+  "proptest": {
+    "version": "1.12.0",
+    "rust_version": "1.88",
+    "published": "2026-10-10T18:18:05.623491Z",
+    "features": {
+      "alloc": [],
+      "atomic64bit": [],
+      "attr-macro": [
+        "proptest-macro"
+      ],
+      "bit-set": [
+        "dep:bit-set",
+        "dep:bit-vec"
+      ],
+      "default": [
+        "std",
+        "fork",
+        "timeout",
+        "bit-set"
+      ],
+      "default-code-coverage": [
+        "std",
+        "fork",
+        "timeout",
+        "bit-set"
+      ],
+      "f16": [],
+      "fork": [
+        "std",
+        "rusty-fork",
+        "tempfile"
+      ],
+      "handle-panics": [
+        "std"
+      ],
+      "hardware-rng": [
+        "x86"
+      ],
+      "no_std": [
+        "num-traits/libm"
+      ],
+      "std": [
+        "rand/std",
+        "rand/sys_rng",
+        "regex-syntax",
+        "num-traits/std"
+      ],
+      "timeout": [
+        "fork",
+        "rusty-fork/timeout"
+      ],
+      "unstable": [
+        "f16"
+      ]
+    },
+    "repository": "https://github.com/proptest-rs/proptest"
+  }
+}

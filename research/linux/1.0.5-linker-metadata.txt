@@ -1,0 +1,25 @@
+Source: /root/.cache/cjr-research-linux/1.0.5/cangjie/lib/linux_x86_64_cjnative/cjld.lds
+SHA256: 764381b4bfd7fdff49e2e348157617abfa3ab8f3c9f683b67073a010cc681004
+162:   /* Cangjie Metadata sections start */
+163:   . = ALIGN(16);
+164:   _CJMetadataStart = .;
+165:   PROVIDE_HIDDEN(__CJMetadataStart = .);
+166:   .cjmetadata : {
+167:       KEEP(*cjstart.o(.cjmetadata.rw.header))
+168:
+169:       . = ALIGN(16);
+170:       PROVIDE_HIDDEN(__CJSDKVersion = . - __CJMetadataStart);
+171:       KEEP(*(.cjmetadata.sdk.version))
+172:       KEEP(*(SORT(.cjmetadata.sdk.version.*)))
+173:       PROVIDE_HIDDEN(__CJSDKVersionEnd = . - __CJMetadataStart);
+174:
+175:       . = ALIGN(16);
+176:       PROVIDE_HIDDEN(__CJMethodInfo = . - __CJMetadataStart);
+177:       KEEP(*(.cjmetadata.methodinfo))
+178:       KEEP(*(SORT(.cjmetadata.methodinfo.*)))
+179:       PROVIDE_HIDDEN(__CJMethodInfoEnd = . - __CJMetadataStart);
+180:
+181:       . = ALIGN(16);
+182:       PROVIDE_HIDDEN(__CJGlobalInitFunc = . - __CJMetadataStart);
+183:       KEEP(*(.cjmetadata.globalInitFunc))
+184:       KEEP(*(SORT(.cjmetadata.globalInitFunc.*)))

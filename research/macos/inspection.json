@@ -1,0 +1,687 @@
+[
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.0.5\\cangjie\\tools\\bin\\cjpm",
+    "bytes": 9553856,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 2,
+    "flags": "0x218085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 4299014144,
+        "size": 320,
+        "offset": 4046848
+      },
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 4299030528,
+        "size": 200,
+        "offset": 4063232
+      }
+    ],
+    "versions": [
+      "1.0.5"
+    ],
+    "version_entries": 25,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path/../../runtime/lib/darwin_aarch64_cjnative"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": true
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.0.5\\cangjie\\bin\\cjc",
+    "bytes": 115214056,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 2,
+    "flags": "0xa18085",
+    "universal": false,
+    "metadata_sections": [],
+    "versions": [],
+    "version_entries": 0,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libncurses.5.4.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      }
+    ],
+    "rpaths": [],
+    "has_chained_fixups": true,
+    "has_dyld_info": false,
+    "code_signature": true
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.0.5\\cangjie\\runtime\\lib\\darwin_aarch64_cjnative\\libcangjie-std-core.dylib",
+    "bytes": 1055344,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 6,
+    "flags": "0x118085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 425984,
+        "size": 8,
+        "offset": 425984
+      },
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 573440,
+        "size": 320,
+        "offset": 573440
+      }
+    ],
+    "versions": [
+      "1.0.5"
+    ],
+    "version_entries": 1,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xd",
+        "path": "@rpath/libcangjie-std-core.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": true
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.0.5\\cangjie\\runtime\\lib\\darwin_aarch64_cjnative\\libcangjie-runtime.dylib",
+    "bytes": 833864,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 6,
+    "flags": "0x918085",
+    "universal": false,
+    "metadata_sections": [],
+    "versions": [],
+    "version_entries": 0,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xd",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path"
+    ],
+    "has_chained_fixups": true,
+    "has_dyld_info": false,
+    "code_signature": true
+  },
+  {
+    "path": "stripped\\cangjie-sdk-mac-aarch64-1.0.5\\cjpm",
+    "bytes": 6110032,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 2,
+    "flags": "0x218085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 4299014144,
+        "size": 320,
+        "offset": 4046848
+      },
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 4299030528,
+        "size": 200,
+        "offset": 4063232
+      }
+    ],
+    "versions": [
+      "1.0.5"
+    ],
+    "version_entries": 25,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path/../../runtime/lib/darwin_aarch64_cjnative"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": true,
+    "strip_stderr": ""
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.2.0\\cangjie\\tools\\bin\\cjpm",
+    "bytes": 21109200,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 2,
+    "flags": "0xa18085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 4303470592,
+        "size": 336,
+        "offset": 8486912
+      },
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 4303486976,
+        "size": 400,
+        "offset": 8503296
+      }
+    ],
+    "versions": [
+      "1.2.0"
+    ],
+    "version_entries": 50,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path/../../runtime/lib/darwin_aarch64_cjnative"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": true
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.2.0\\cangjie\\bin\\cjc",
+    "bytes": 68994656,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 2,
+    "flags": "0xa18085",
+    "universal": false,
+    "metadata_sections": [],
+    "versions": [],
+    "version_entries": 0,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libncurses.5.4.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      }
+    ],
+    "rpaths": [],
+    "has_chained_fixups": true,
+    "has_dyld_info": false,
+    "code_signature": true
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.2.0\\cangjie\\runtime\\lib\\darwin_aarch64_cjnative\\libcangjie-std-core.dylib",
+    "bytes": 1144336,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 6,
+    "flags": "0x118085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 458752,
+        "size": 8,
+        "offset": 458752
+      },
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 622592,
+        "size": 336,
+        "offset": 622592
+      }
+    ],
+    "versions": [
+      "1.2.0"
+    ],
+    "version_entries": 1,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xd",
+        "path": "@rpath/libcangjie-std-core.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": true
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-aarch64-1.2.0\\cangjie\\runtime\\lib\\darwin_aarch64_cjnative\\libcangjie-runtime.dylib",
+    "bytes": 918552,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 6,
+    "flags": "0x918085",
+    "universal": false,
+    "metadata_sections": [],
+    "versions": [],
+    "version_entries": 0,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xd",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path"
+    ],
+    "has_chained_fixups": true,
+    "has_dyld_info": false,
+    "code_signature": true
+  },
+  {
+    "path": "stripped\\cangjie-sdk-mac-aarch64-1.2.0\\cjpm",
+    "bytes": 13491216,
+    "cpu": "0x100000c",
+    "cpu_subtype": 0,
+    "filetype": 2,
+    "flags": "0xa18085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 4303470592,
+        "size": 336,
+        "offset": 8486912
+      },
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 4303486976,
+        "size": 400,
+        "offset": 8503296
+      }
+    ],
+    "versions": [
+      "1.2.0"
+    ],
+    "version_entries": 50,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path/../../runtime/lib/darwin_aarch64_cjnative"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": true,
+    "strip_stderr": ""
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-x64-1.3.0-alpha.20261107001016\\cangjie\\tools\\bin\\cjpm",
+    "bytes": 22277632,
+    "cpu": "0x1000007",
+    "cpu_subtype": 2147483651,
+    "filetype": 2,
+    "flags": "0xa18085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 4305326080,
+        "size": 336,
+        "offset": 10346496
+      },
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 4305330176,
+        "size": 400,
+        "offset": 10350592
+      }
+    ],
+    "versions": [
+      "1.3.0-alpha.20261107001016"
+    ],
+    "version_entries": 50,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path/../../runtime/lib/darwin_x86_64_cjnative"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": false
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-x64-1.3.0-alpha.20261107001016\\cangjie\\bin\\cjc",
+    "bytes": 74069168,
+    "cpu": "0x1000007",
+    "cpu_subtype": 3,
+    "filetype": 2,
+    "flags": "0xa18085",
+    "universal": false,
+    "metadata_sections": [],
+    "versions": [],
+    "version_entries": 0,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libncurses.5.4.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      }
+    ],
+    "rpaths": [],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": false
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-x64-1.3.0-alpha.20261107001016\\cangjie\\runtime\\lib\\darwin_x86_64_cjnative\\libcangjie-std-core.dylib",
+    "bytes": 1121952,
+    "cpu": "0x1000007",
+    "cpu_subtype": 3,
+    "filetype": 6,
+    "flags": "0x118085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 483328,
+        "size": 8,
+        "offset": 483328
+      },
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 659456,
+        "size": 336,
+        "offset": 659456
+      }
+    ],
+    "versions": [
+      "1.3.0-alpha.20261107001016"
+    ],
+    "version_entries": 1,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xd",
+        "path": "@rpath/libcangjie-std-core.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": false
+  },
+  {
+    "path": "extracted\\cangjie-sdk-mac-x64-1.3.0-alpha.20261107001016\\cangjie\\runtime\\lib\\darwin_x86_64_cjnative\\libcangjie-runtime.dylib",
+    "bytes": 1236064,
+    "cpu": "0x1000007",
+    "cpu_subtype": 3,
+    "filetype": 6,
+    "flags": "0x918085",
+    "universal": false,
+    "metadata_sections": [],
+    "versions": [],
+    "version_entries": 0,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xd",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path"
+    ],
+    "has_chained_fixups": true,
+    "has_dyld_info": false,
+    "code_signature": false
+  },
+  {
+    "path": "stripped\\cangjie-sdk-mac-x64-1.3.0-alpha.20261107001016\\cjpm",
+    "bytes": 14446360,
+    "cpu": "0x1000007",
+    "cpu_subtype": 2147483651,
+    "filetype": 2,
+    "flags": "0xa18085",
+    "universal": false,
+    "metadata_sections": [
+      {
+        "name": "__cjmetaheader",
+        "segment": "__CJMETAHEADER",
+        "address": 4305326080,
+        "size": 336,
+        "offset": 10346496
+      },
+      {
+        "name": "__cjsdkversion",
+        "segment": "__CJ_METADATA",
+        "address": 4305330176,
+        "size": 400,
+        "offset": 10350592
+      }
+    ],
+    "versions": [
+      "1.3.0-alpha.20261107001016"
+    ],
+    "version_entries": 50,
+    "decode_errors": [],
+    "dependencies": [
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libc++.1.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "/usr/lib/libSystem.B.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libcangjie-runtime.dylib"
+      },
+      {
+        "command": "0xc",
+        "path": "@rpath/libboundscheck.dylib"
+      }
+    ],
+    "rpaths": [
+      "@loader_path/../../runtime/lib/darwin_x86_64_cjnative"
+    ],
+    "has_chained_fixups": false,
+    "has_dyld_info": true,
+    "code_signature": false,
+    "strip_stderr": ""
+  }
+]

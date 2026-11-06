@@ -1,0 +1,55 @@
+   2044619:	find library=libstdc++.so.6 [0]; searching
+   2044619:	 search cache=/etc/ld.so.cache
+   2044619:	  trying file=/lib/x86_64-linux-gnu/libstdc++.so.6
+   2044619:
+   2044619:	find library=libm.so.6 [0]; searching
+   2044619:	 search cache=/etc/ld.so.cache
+   2044619:	  trying file=/lib/x86_64-linux-gnu/libm.so.6
+   2044619:
+   2044619:	find library=libc.so.6 [0]; searching
+   2044619:	 search cache=/etc/ld.so.cache
+   2044619:	  trying file=/lib/x86_64-linux-gnu/libc.so.6
+   2044619:
+   2044619:	find library=libgcc_s.so.1 [0]; searching
+   2044619:	 search cache=/etc/ld.so.cache
+   2044619:	  trying file=/lib/x86_64-linux-gnu/libgcc_s.so.1
+   2044619:
+   2044619:
+   2044619:	calling init: /lib64/ld-linux-x86-64.so.2
+   2044619:
+   2044619:
+   2044619:	calling init: /lib/x86_64-linux-gnu/libc.so.6
+   2044619:
+   2044619:
+   2044619:	calling init: /lib/x86_64-linux-gnu/libgcc_s.so.1
+   2044619:
+   2044619:
+   2044619:	calling init: /lib/x86_64-linux-gnu/libm.so.6
+   2044619:
+   2044619:
+   2044619:	calling init: /lib/x86_64-linux-gnu/libstdc++.so.6
+   2044619:
+   2044619:
+   2044619:	initialize program: /root/.cache/cjr-research-linux/artifacts/1.0.5/probe-static-stripped
+   2044619:
+   2044619:
+   2044619:	transferring control: /root/.cache/cjr-research-linux/artifacts/1.0.5/probe-static-stripped
+   2044619:
+   2044619:
+   2044619:	calling fini:  [0]
+   2044619:
+   2044619:
+   2044619:	calling fini: /lib/x86_64-linux-gnu/libstdc++.so.6 [0]
+   2044619:
+   2044619:
+   2044619:	calling fini: /lib/x86_64-linux-gnu/libm.so.6 [0]
+   2044619:
+   2044619:
+   2044619:	calling fini: /lib/x86_64-linux-gnu/libgcc_s.so.1 [0]
+   2044619:
+   2044619:
+   2044619:	calling fini: /lib/x86_64-linux-gnu/libc.so.6 [0]
+   2044619:
+   2044619:
+   2044619:	calling fini: /lib64/ld-linux-x86-64.so.2 [0]
+   2044619:
