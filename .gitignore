@@ -1,0 +1,28 @@
+# Downloaded research SDKs and generated build products.
+research/**/archives/
+research/**/sdk-archives/
+research/**/sdks/
+research/**/extracted/
+research/**/stripped/
+research/**/builds/
+research/**/runtimes/
+research/**/target/
+research/**/*.exe
+research/**/*.dll
+research/**/*.lib
+research/**/*.a
+research/**/*.o
+research/**/*.obj
+research/**/*.cjo
+research/**/*.pdb
+research/**/__pycache__/
+research/**/*.partial
+research/**/*.part
+/target/
+/research/implementation-artifacts/
+
+# Research executables without an extension and native shared libraries.
+research/linux/artifacts/
+research/**/*.so
+research/**/*.dylib
+**/__pycache__/
