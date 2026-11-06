@@ -98,6 +98,12 @@ for version in args.versions:
                 t.extractall(extracted, filter="data")
     sdk = extracted / "cangjie"
     compiler = sdk / "bin" / ("cjc.exe" if host == "Windows" else "cjc")
+    compile_env = dict(os.environ, CANGJIE_HOME=str(sdk))
+    if host == "Darwin":
+        # Match the official envsetup.sh: cjc needs Apple's SDK for libSystem.
+        compile_env["SDKROOT"] = subprocess.check_output(
+            ["xcrun", "--sdk", "macosx", "--show-sdk-path"], text=True, timeout=30
+        ).strip()
     home = root / version / "cjr"
     cjv = root / version / "cjv"
     (home / "metadata").mkdir(parents=True, exist_ok=True)
@@ -141,7 +147,7 @@ for version in args.versions:
         run(
             f"compile/{version}/{mode}",
             [compiler, repo / "tests/fixtures/workload.cj", *flags, "-o", binary],
-            os.environ,
+            compile_env,
         )
         inspected = run(
             f"inspect/{version}/{mode}", [cjr, "inspect", binary, "--json"], env
