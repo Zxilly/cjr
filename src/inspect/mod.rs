@@ -124,9 +124,7 @@ pub fn inspect_bytes(bytes: &[u8], path: PathBuf) -> Result<InspectReport> {
         object::BinaryFormat::MachO => {
             macho::commands(data, &mut r)?;
             r.hardened |= file.section_by_name("__restrict").is_some();
-            file.section_by_name("__cjsdkversion")
-                .map(|s| pointers(&file, s.data()?, None))
-                .transpose()
+            macho::versions(&file)
         }
         _ => {
             return Err(Error::new(

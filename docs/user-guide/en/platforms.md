@@ -12,7 +12,7 @@ Availability also requires an official SDK asset for the exact version and archi
 
 ## Unknown SDK version
 
-Run `cjr inspect <binary>` first. ELF requires section headers. Chained fixups in Mach-O version metadata are not supported. Missing metadata and unknown layouts produce a diagnostic rather than a guessed version. Ask the application distributor for a supported build.
+Run `cjr inspect <binary>` first. ELF requires section headers. Mach-O supports both ordinary version pointers and chained fixups. Missing or damaged metadata and unknown layouts produce a diagnostic rather than a guessed version. Ask the application distributor for a build that preserves version metadata.
 
 ## Unavailable official asset
 

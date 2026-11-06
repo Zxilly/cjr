@@ -12,7 +12,7 @@
 
 ## 找不到 SDK 版本
 
-先运行 `cjr inspect <binary>`。ELF 需要保留 section headers，Mach-O 暂不支持版本元数据中的 chained fixups。版本表缺失或布局未知时，cjr 不会通过扫描任意字符串来猜测版本。请向程序分发者索取支持的构建产物。
+先运行 `cjr inspect <binary>`。ELF 需要保留 section headers。Mach-O 支持普通版本指针和 chained fixups。版本表缺失、损坏或布局未知时，cjr 不会通过扫描任意字符串来猜测版本。请向程序分发者索取保留版本元数据的构建产物。
 
 ## 官方资产不可用
 

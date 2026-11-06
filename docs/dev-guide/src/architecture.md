@@ -20,6 +20,8 @@
 
 SDK 版本来自 PE `.cjsdkv`、ELF `.cjmetadata` 或 Mach-O `__CJ_METADATA,__cjsdkversion`。它是发行包选择依据，不是通用 ABI 指纹。所有解析必须校验边界，未知布局返回错误。
 
+Mach-O 的 chained fixups 由 `object` 解析，`inspect::macho::fixups` 将 rebase 结果映射到版本表。支持 `DYLD_CHAINED_PTR_64`、`64_OFFSET`、`ARM64E`、`ARM64E_USERLAND` 和 `ARM64E_USERLAND24`，包括认证指针。解析只读取文件，不加载程序或执行指针认证；版本条目必须指向本文件中的字符串，不能绑定外部符号。链遍历有工作量上限，并检查文件与虚拟地址映射、页边界和重复条目。
+
 ## 缓存生命周期
 
 `StoreTransaction` 持有存储排他锁。元数据、准备、发布、使用登记和清理通过同一把锁协调。不同版本的首次准备会串行，程序运行期间不持有锁。

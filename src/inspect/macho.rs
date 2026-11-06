@@ -1,4 +1,21 @@
 use super::*;
+mod fixups;
+
+pub(super) fn versions(file: &object::File<'_>) -> Result<Option<Vec<String>>> {
+    let Some(section) = file.section_by_name("__cjsdkversion") else {
+        return Ok(None);
+    };
+    let raw = section.data()?;
+    if !raw.len().is_multiple_of(8) || raw.len() > 1024 * 1024 {
+        return Err(Error::new(
+            "UnsupportedMetadata",
+            "invalid version table length",
+        ));
+    }
+    let replacements = fixups::version_pointers(file, &section)?;
+    pointers(file, raw, Some(&replacements)).map(Some)
+}
+
 fn be32(b: &[u8], o: usize) -> Result<u32> {
     Ok(u32::from_be_bytes(bounds(b, o, 4)?.try_into().map_err(
         |_| Error::new("MalformedBinary", "invalid integer width"),

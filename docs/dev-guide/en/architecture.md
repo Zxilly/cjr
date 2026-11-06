@@ -20,6 +20,8 @@ cjr reads metadata and checks host architecture and dependencies. When a runtime
 
 The SDK version comes from PE `.cjsdkv`, ELF `.cjmetadata` or Mach-O `__CJ_METADATA,__cjsdkversion`. It identifies a release, not a universal ABI fingerprint. Parsers validate bounds and reject unknown layouts.
 
+Mach-O chained fixups are decoded by `object`; `inspect::macho::fixups` maps rebases into the version table. Supported formats are `DYLD_CHAINED_PTR_64`, `64_OFFSET`, `ARM64E`, `ARM64E_USERLAND` and `ARM64E_USERLAND24`, including authenticated pointers. Inspection reads the file without loading it or authenticating pointers. Version entries must reference local strings, not external symbol bindings. Traversal has a work limit and checks file-to-virtual-address mappings, page boundaries and duplicate entries.
+
 ## Cache lifecycle
 
 `StoreTransaction` holds an exclusive storage lock for metadata, preparation, publication, usage registration and cleanup. Initial preparation of different versions is serialized. The lock is released while the application runs.
