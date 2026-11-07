@@ -1,6 +1,6 @@
 # Releasing
 
-`package.version` in `Cargo.toml` is the version source. Clap embeds it at compile time; `cjr --version` and `cjr -V` report that value without Git or repository files at runtime.
+`package.version` in `Cargo.toml` is the version source. Clap embeds it at compile time; `cjr --version` and `cjr -V` report the value stored in the binary.
 
 ## Publish a version
 
@@ -15,12 +15,12 @@
 - macOS Apple Silicon: `aarch64-apple-darwin`, tar.gz.
 - macOS Intel: `x86_64-apple-darwin`, tar.gz.
 
-Archives are named `cjr-v<version>-<target>` and contain the executable and both READMEs. The minimum macOS version is 13.0. Each release binary is run with `--version`. Once all jobs succeed, `softprops/action-gh-release` publishes the draft. Failed jobs leave it unpublished and can be rerun in Actions. Do not move published tags; ship subsequent fixes in a new version.
+Archives are named `cjr-v<version>-<target>` and contain the executable and both READMEs. The minimum macOS version is 13.0. Each release binary is run with `--version`. Once all jobs succeed, `softprops/action-gh-release` publishes the draft. Failed jobs leave it unpublished and can be rerun in Actions. Keep published tags fixed and ship subsequent fixes in a new version.
 
 Actions are pinned to full commit SHAs and tracked by Dependabot. The workflow uses GitHub's `GITHUB_TOKEN`, granting write access only to jobs that create, upload or publish the release.
 
 ## Static linking
 
-`.cargo/config.toml` enables `crt-static` for Windows MSVC and Linux musl. Windows embeds the C/C++ runtime while retaining Windows system DLL imports. Linux release binaries must have neither dynamic dependencies nor an ELF interpreter. Rust dependencies and bundled native libraries are linked statically. macOS retains system libraries under `/usr/lib/` and `/System/Library/`; libSystem and system frameworks are not replaced with static libraries.
+`.cargo/config.toml` enables `crt-static` for Windows MSVC and Linux musl. Windows embeds the C/C++ runtime while retaining Windows system DLL imports. Linux release binaries use fully static linking, with empty dynamic dependency and ELF interpreter entries. Rust dependencies and bundled native libraries are linked statically. macOS uses system libraries under `/usr/lib/` and `/System/Library/`, with libSystem and system frameworks supplied by the operating system.
 
 The release workflow reads each final binary's dependency table and rejects a dynamic Windows CRT, any Linux dynamic dependency, or non-system macOS libraries. This policy applies to cjr itself; Cangjie applications still use their matching dynamic runtime.

@@ -18,13 +18,13 @@ cargo clippy --all-targets --locked -- -D warnings
 cargo test --all-targets --locked
 ```
 
-Tests cover binary parsing, CLI arguments, download failures, cache lifecycle and process state. HTTP scenarios use mockito; arbitrary-input tests use proptest. Ordinary tests do not download official SDKs.
+Tests cover binary parsing, CLI arguments, download failures, cache lifecycle and process state. HTTP scenarios use mockito; arbitrary-input tests use proptest. Ordinary tests use local fixtures and mock services.
 
 CI runs these checks and release builds on Windows, Linux, macOS ARM64 and Intel. A separate Linux job checks the minimum Rust version. The website job builds the landing page and documentation.
 
 ## Implementation rules
 
 - Keep FFI and necessary unsafe operations inside the private `platform` module, behind safe interfaces with documented preconditions.
-- Hold `StoreTransaction` for cache mutations and usage registration. Never modify cjv-owned files.
+- Hold `StoreTransaction` for cache mutations and usage registration. Keep cjv-owned files intact.
 - Use backon for retries, walkdir for directory traversal and object for binary formats.
-- Retain usage records when descendant liveness is uncertain. Cleanup failures must not replace the application's exit status.
+- Retain usage records when descendant liveness is uncertain. Preserve the application's exit status even when cleanup fails.
