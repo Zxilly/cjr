@@ -2,17 +2,30 @@
 
 The site follows cjv's structure: `web/` contains the landing page, while `docs/user-guide/` and `docs/dev-guide/` contain the two manuals. Each book uses `src/` for Chinese and `en/` for English.
 
-Vite builds static HTML, CSS and JavaScript. Fonts are bundled locally. mdBook generates the manuals.
+The landing page uses React, TypeScript and Vite. Radix Tabs handles installation method switching, and react-i18next provides translations. React prerenders both languages during the build, and the browser hydrates those pages for interaction. Fonts are bundled locally. mdBook generates the manuals.
 
 ## Local development
 
-Install Node.js 22.12+ or 24+, npm and mdBook 0.5.4.
+Install Node.js 22.22.2+, 24.15+ or 26+, npm and mdBook 0.5.4. The current Node.js LTS is recommended.
 
 ```sh
 cd web
 npm ci
 npm run dev
 ```
+
+Frontend source layout:
+
+| Path | Responsibility |
+| --- | --- |
+| `src/App.tsx` | Page composition |
+| `src/components/` | Navigation, installation methods, downloads, documentation links and command copying |
+| `src/config.ts` | Release assets and installation commands |
+| `src/i18n/` | Translation types, language detection and instance initialization |
+| `src/locales/` | Chinese and English translations |
+| `scripts/` | Version loading, React prerendering, mdBook builds and navigation |
+
+Use `npm run typecheck` for strict TypeScript checks, `npm run lint` for code checks and `npm run format` to apply formatting. `npm run test:unit` runs interaction tests with Vitest and Testing Library.
 
 To preview the Chinese user guide separately:
 
@@ -52,11 +65,11 @@ Update both languages and their `SUMMARY.md` files when editing documentation. I
 
 Landing-page messages live in `web/src/locales/zh-CN.json` and `en.json`, managed by i18next. Explicit language URLs take precedence, followed by the legacy `?lang=` query, a saved preference and the browser language. Other languages fall back to English.
 
-The build generates complete HTML at `/zh-CN/` and `/en/`. Static HTML provides download and documentation links. Titles, descriptions, accessible labels and copy feedback use translation resources. The download version comes from `Cargo.toml`, matching the binary.
+The build generates complete HTML at `/zh-CN/` and `/en/` using the same React components as the browser. Static HTML provides download and documentation links. Each language has an independent translation instance, and hydration uses the page's locale. The root path redirects to the preferred language page when needed. Titles, descriptions, accessible labels and copy feedback use translation resources. The download version comes from `Cargo.toml`, matching the binary.
 
 Both documentation languages use matching chapter filenames. The build adds language links to each chapter. Switching keeps the chapter and drops heading anchors that differ between translations. Home links preserve the selected language. Chinese documentation toolbar translations live in `web/src/locales/book-zh-CN.json`.
 
-`npm test` builds the site and verifies language pages, downloads and chapter switching. Add messages to both languages; missing translation keys fail the build. Use `SITE_BASE=/cjr/ npm test` to check a subpath deployment.
+`npm test` runs Biome checks, component interaction tests, TypeScript checks, the complete site build and output tests. Tests cover keyboard tab navigation, clipboard success and failure feedback, bilingual hydration, language precedence, downloads and chapter switching. Add messages to both languages; missing translation keys fail the build. Use `SITE_BASE=/cjr/ npm test` to check a subpath deployment. CI and production deployment use this same command.
 
 ## Production deployment
 

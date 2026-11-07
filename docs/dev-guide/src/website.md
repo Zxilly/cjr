@@ -2,17 +2,30 @@
 
 网站沿用 cjv 的组织方式：`web/` 是 landing 页，`docs/user-guide/` 和 `docs/dev-guide/` 分别维护用户手册与开发指南。每本书的 `src/` 为中文，`en/` 为英文。
 
-landing 页使用 Vite 构建静态 HTML、CSS 和 JavaScript，字体随站点打包。文档由 mdBook 生成。
+landing 页使用 React、TypeScript 和 Vite。安装方式切换由 Radix Tabs 处理，翻译通过 react-i18next 提供。构建时由 React 预渲染双语 HTML，浏览器通过 hydration 接管交互。字体随站点打包，文档由 mdBook 生成。
 
 ## 本地开发
 
-需要 Node.js 22.12+ 或 24+、npm 和 mdBook 0.5.4。
+需要 Node.js 22.22.2+、24.15+ 或 26+，以及 npm 和 mdBook 0.5.4。建议使用当前 Node.js LTS。
 
 ```sh
 cd web
 npm ci
 npm run dev
 ```
+
+前端源码按职责组织：
+
+| 路径 | 职责 |
+| --- | --- |
+| `src/App.tsx` | 页面组合 |
+| `src/components/` | 导航、安装方式、下载与文档入口、命令复制 |
+| `src/config.ts` | 发行资产和安装命令 |
+| `src/i18n/` | 翻译类型、语言检测和实例初始化 |
+| `src/locales/` | 中英文翻译资源 |
+| `scripts/` | 版本读取、React 预渲染、mdBook 构建与导航 |
+
+`npm run typecheck` 执行严格 TypeScript 检查；`npm run lint` 和 `npm run format` 分别检查和整理代码。`npm run test:unit` 运行 Vitest 与 Testing Library 交互测试。
 
 单独预览中文手册：
 
@@ -52,11 +65,11 @@ dist/
 
 首页文案位于 `web/src/locales/zh-CN.json` 和 `en.json`，由 i18next 处理。显式语言 URL 优先，其次是旧链接的 `?lang=`、已保存的选择和浏览器语言。其他语言回退到英文。
 
-构建时生成 `/zh-CN/` 和 `/en/` 的完整 HTML，下载和文档链接由静态 HTML 提供。页面标题、搜索摘要、无障碍标签和复制提示均使用翻译资源。下载版本从 `Cargo.toml` 读取，与二进制保持一致。
+构建时使用与浏览器相同的 React 组件生成 `/zh-CN/` 和 `/en/` 的完整 HTML，下载和文档链接由静态 HTML 提供。每种语言独立初始化翻译实例，hydration 使用对应页面的语言。根路径按语言偏好跳转到相应语言页。页面标题、搜索摘要、无障碍标签和复制提示均使用翻译资源。下载版本从 `Cargo.toml` 读取，与二进制保持一致。
 
 两种语言的文档使用相同章节文件名。构建过程为每章添加语言链接，切换时保留章节、移除各语言特有的标题锚点；首页链接保持所选语言。中文文档工具栏翻译位于 `web/src/locales/book-zh-CN.json`。
 
-`npm test` 构建站点并验证语言页面、下载链接和章节切换。新增文案必须同时补齐两种语言，缺少翻译键会使构建失败。可以用 `SITE_BASE=/cjr/ npm test` 验证子路径部署。
+`npm test` 依次执行 Biome 检查、组件交互测试、TypeScript 检查、完整站点构建和产物测试。测试覆盖 tab 键盘操作、复制成功与失败反馈、双语 hydration、语言优先级、下载链接和章节切换。新增文案必须同时补齐两种语言，缺少翻译键会使构建失败。可以用 `SITE_BASE=/cjr/ npm test` 验证子路径部署。CI 和生产部署使用同一套命令。
 
 ## 生产部署
 
