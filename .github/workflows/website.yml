@@ -48,6 +48,7 @@ jobs:
       - run: npm test
         working-directory: web
       - name: Deploy production site
+        shell: bash
         run: |
           : "${EDGEONE_PROJECT_NAME:?Set the EDGEONE_PROJECT_NAME repository variable}"
           : "${EDGEONE_API_TOKEN:?Set the EDGEONE_API_TOKEN repository secret}"
