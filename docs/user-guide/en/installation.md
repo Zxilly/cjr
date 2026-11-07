@@ -2,7 +2,7 @@
 
 ## Download a prebuilt binary
 
-Download the archive for your system and architecture from [GitHub Releases](https://github.com/Zxilly/cjr/releases/latest). Rust is not required.
+Download the prebuilt archive for your system and architecture from [GitHub Releases](https://github.com/Zxilly/cjr/releases/latest).
 
 | System | v0.0.1 download |
 | --- | --- |
@@ -27,7 +27,7 @@ cjr --version
 # cjr 0.0.1
 ```
 
-Windows binaries include the C/C++ runtime and do not require a separate Visual C++ Redistributable installation. The macOS binaries require macOS 13 or newer. The Linux binary is statically linked with musl; the Cangjie application and its runtime still have their own system requirements.
+Windows binaries include the C/C++ runtime. The macOS binaries require macOS 13 or newer. The Linux binary is statically linked with musl; the Cangjie application and its runtime still have their own system requirements.
 
 ## Install from source
 
@@ -65,7 +65,7 @@ Windows PowerShell:
 cjr .\app.exe --port 8080
 ```
 
-The first launch may download a full SDK archive. Only the runtime is extracted; later launches reuse it. cjr leaves the executable at its original location and preserves the working directory, standard streams and application arguments.
+The first launch may download a full SDK archive. Only the runtime is extracted; later launches reuse it. cjr runs the original executable in place, preserves its contents and uses the current working directory, standard streams and application arguments.
 
 ## Offline use
 
@@ -75,6 +75,6 @@ Run the program once while online, then use:
 cjr --offline ./app
 ```
 
-Offline mode forbids network requests. Existing runtime records, or local metadata with matching SDK content, must identify an official asset. Missing content produces an error.
+Offline mode uses local content exclusively. Existing runtime records, or local metadata with matching SDK content, must identify an official asset. Missing content produces an error.
 
 Put `--offline` and `-v` before the executable path. Everything after that path belongs to the application.

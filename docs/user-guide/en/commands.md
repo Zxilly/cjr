@@ -24,7 +24,7 @@ cjr inspect ./app
 cjr inspect ./app --json
 ```
 
-Show the binary format, architecture, SDK version, dynamic dependencies and local runtime candidates. This command does not execute the program, download an SDK or create a cache.
+Show the binary format, architecture, SDK version, dynamic dependencies and local runtime candidates. Inspection is a read-only operation on local files.
 
 ## List local content
 
@@ -33,7 +33,7 @@ cjr list
 cjr list --json
 ```
 
-List visible cjr and cjv assets with their source and usage state. This does not query remote releases.
+List visible cjr and cjv assets with their source and usage state. The query covers local content.
 
 ## Clean the cache
 
@@ -48,4 +48,4 @@ The default removes archives, metadata and abandoned staging content while retai
 
 ## JSON output
 
-`inspect --json` and `list --json` include a `schema_version` field. Automation should check the exit status and schema version, accept additional fields and preserve warnings or unknown states rather than treating them as successful matches.
+`inspect --json` and `list --json` include a `schema_version` field. Automation should check the exit status and schema version, accept additional fields and handle warnings and unknown states explicitly. Treat a match as successful only when the reported state confirms it.

@@ -36,7 +36,7 @@ cjr cache clean --dry-run
 cjr cache clean --all
 ```
 
-程序路径后的参数原样传给应用。`inspect` 和 `list` 只查询本地内容。清理只操作 cjr 自己的缓存，不修改 cjv 的文件；`--all` 也会跳过使用状态不明的运行库。
+程序路径后的参数原样传给应用。`inspect` 和 `list` 只查询本地内容。清理范围为 cjr 自己的缓存；cjv 的文件保持原样，`--all` 会保留使用状态待确认的运行库。
 
 Windows x64、Linux x64 和 macOS ARM64/x64 的可用运行库以[官方发行清单](https://github.com/Zxilly/cangjie-version-manifest)为准。cjr 只处理同一官方 SDK 正确构建的程序，应用自己的库、stdx 和系统依赖仍需另行提供。详情见[平台与常见问题](docs/user-guide/src/platforms.md)。
 

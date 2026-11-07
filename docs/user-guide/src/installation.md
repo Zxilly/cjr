@@ -2,7 +2,7 @@
 
 ## 下载预编译版本
 
-从 [GitHub Releases](https://github.com/Zxilly/cjr/releases/latest) 下载与你的系统和架构对应的归档，无需安装 Rust。
+从 [GitHub Releases](https://github.com/Zxilly/cjr/releases/latest) 下载与你的系统和架构对应的预编译归档。
 
 | 系统 | v0.0.1 下载 |
 | --- | --- |
@@ -27,7 +27,7 @@ cjr --version
 # cjr 0.0.1
 ```
 
-Windows 版本已包含 C/C++ 运行时，无需单独安装 Visual C++ Redistributable。macOS 预编译版本要求 macOS 13 或更新版本。Linux 版本使用 musl 静态链接；目标仓颉程序及其运行库的系统要求仍需满足。
+Windows 版本已包含 C/C++ 运行时。macOS 预编译版本要求 macOS 13 或更新版本。Linux 版本使用 musl 静态链接；目标仓颉程序及其运行库的系统要求仍需满足。
 
 ## 从源码安装
 
@@ -65,7 +65,7 @@ Windows PowerShell：
 cjr .\app.exe --port 8080
 ```
 
-第一次运行可能需要下载完整 SDK 归档，cjr 只提取所需运行库。后续运行会复用缓存。cjr 不复制或改写目标程序；工作目录、标准输入输出和程序参数沿用当前调用。
+第一次运行可能需要下载完整 SDK 归档，cjr 只提取所需运行库。后续运行会复用缓存。cjr 直接启动原路径下的程序，保持程序文件原样；工作目录、标准输入输出和程序参数沿用当前调用。
 
 ## 离线使用
 
@@ -75,6 +75,6 @@ cjr .\app.exe --port 8080
 cjr --offline ./app
 ```
 
-离线模式禁止网络请求。已保存的运行库记录，或本地清单加匹配的 SDK 缓存，必须足以确定官方资产身份。缺少这些内容时会返回错误。
+离线模式仅使用本地内容。已保存的运行库记录，或本地清单加匹配的 SDK 缓存，必须足以确定官方资产身份。缺少这些内容时会返回错误。
 
 `--offline` 和 `-v` 必须放在程序路径之前。路径后面的参数全部交给目标程序。

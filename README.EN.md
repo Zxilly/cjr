@@ -36,7 +36,7 @@ cjr cache clean --dry-run
 cjr cache clean --all
 ```
 
-Arguments after the executable path go directly to the application. `inspect` and `list` read local content only. Cleanup affects only cjr-owned storage, never cjv files; `--all` still retains runtimes with uncertain usage state.
+Arguments after the executable path go directly to the application. `inspect` and `list` read local content only. Cleanup affects cjr-owned storage and leaves cjv files intact; `--all` retains runtimes whose usage state needs confirmation.
 
 Runtime availability for Windows x64, Linux x64 and macOS ARM64/x64 depends on the [official release manifest](https://github.com/Zxilly/cangjie-version-manifest). Programs must be correctly built with one official SDK. Application libraries, stdx and system dependencies must be provided separately. See [Platforms and troubleshooting](docs/user-guide/en/platforms.md).
 
