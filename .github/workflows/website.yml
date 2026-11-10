@@ -58,3 +58,10 @@ jobs:
           npx --yes edgeone@1.6.47 makers deploy ./dist \
             --name "$EDGEONE_PROJECT_NAME" --area global --env production --skip-ai-gateway-sync \
             | sed -E 's/(eo_token=)[^&[:space:]"]+/\1[redacted]/g'
+
+  indexnow:
+    name: Notify search engines
+    needs: deploy
+    permissions:
+      contents: read
+    uses: ./.github/workflows/indexnow.yml
