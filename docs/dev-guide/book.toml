@@ -4,6 +4,10 @@ authors = ["Zxilly"]
 language = "zh-CN"
 src = "src"
 
+[output.sitemap]
+base-url = "https://cjr.zxilly.com/book/dev-guide/zh-CN/"
+include-lastmod = false
+
 [output.html]
 git-repository-url = "https://github.com/Zxilly/cjr"
 default-theme = "light"

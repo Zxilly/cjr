@@ -53,6 +53,8 @@ jobs:
         run: |
           curl --fail --location --retry 3 https://github.com/rust-lang/mdBook/releases/download/v0.5.4/mdbook-v0.5.4-x86_64-unknown-linux-musl.tar.gz | tar -xz -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+      - name: Install mdBook sitemap backend
+        run: cargo install mdbook-sitemap --version 0.1.1 --locked
       - run: npm ci --no-audit --no-fund
         working-directory: web
       - run: npm test

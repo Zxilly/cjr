@@ -6,9 +6,10 @@ The landing page uses React, TypeScript and Vite. Radix Tabs handles installatio
 
 ## Local development
 
-Install Node.js 22.22.2+, 24.15+ or 26+, npm and mdBook 0.5.4. The current Node.js LTS is recommended.
+Install Node.js 22.22.2+, 24.15+ or 26+, npm, mdBook 0.5.4 and mdbook-sitemap 0.1.1. The current Node.js LTS is recommended.
 
 ```sh
+cargo install mdbook-sitemap --version 0.1.1 --locked
 cd web
 npm ci
 npm run dev
@@ -42,6 +43,8 @@ npm run preview
 ```
 
 The repository-root `dist/` directory contains the landing page and all four books:
+
+The `mdbook-sitemap` backend generates each book's sitemap from its chapter structure. The build copies `html/` into the existing public directories and merges the plugin output with the two landing pages. `scripts/seo.ts` still handles page summaries and canonical URLs. `include-lastmod` is disabled to avoid reporting build dates as content modification dates.
 
 ```text
 dist/

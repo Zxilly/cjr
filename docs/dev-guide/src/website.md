@@ -6,9 +6,10 @@ landing 页使用 React、TypeScript 和 Vite。安装方式切换由 Radix Tabs
 
 ## 本地开发
 
-需要 Node.js 22.22.2+、24.15+ 或 26+，以及 npm 和 mdBook 0.5.4。建议使用当前 Node.js LTS。
+需要 Node.js 22.22.2+、24.15+ 或 26+，以及 npm、mdBook 0.5.4 和 mdbook-sitemap 0.1.1。建议使用当前 Node.js LTS。
 
 ```sh
+cargo install mdbook-sitemap --version 0.1.1 --locked
 cd web
 npm ci
 npm run dev
@@ -42,6 +43,8 @@ npm run preview
 ```
 
 构建输出位于根目录 `dist/`，包含首页和四本书：
+
+`mdbook-sitemap` 后端根据章节结构生成每本书的 sitemap。构建脚本将 `html/` 复制到既有公开目录，再合并插件产物与中英文首页；`scripts/seo.ts` 继续处理页面摘要和 canonical。插件关闭 `include-lastmod`，避免把构建日期误当作内容修改日期。
 
 ```text
 dist/

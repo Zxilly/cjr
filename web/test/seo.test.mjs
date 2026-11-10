@@ -14,6 +14,7 @@ test('sitemap points only to canonical pages with localized metadata and analyti
   const urls = sitemap('loc').toArray().map((element) => sitemap(element).text());
   assert.equal(urls.length, 22);
   assert.equal(new Set(urls).size, urls.length);
+  assert.equal(sitemap('lastmod').length, 0, 'build dates are not page modification dates');
   const descriptions = new Set();
   for (const url of urls) {
     assert.ok(url.startsWith(origin + base));

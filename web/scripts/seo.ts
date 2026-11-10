@@ -46,8 +46,11 @@ const summaries: Record<string, [string, string]> = {
   ],
 };
 
-export async function buildSiteSeo(dist: string, base: string) {
-  const urls: string[] = [];
+export async function buildSiteSeo(
+  dist: string,
+  base: string,
+  sitemaps: string[],
+) {
   for (const entry of await readdir(dist, { recursive: true })) {
     if (!entry.endsWith('.html')) continue;
     const path = entry.replaceAll('\\', '/');
@@ -66,7 +69,6 @@ export async function buildSiteSeo(dist: string, base: string) {
       const canonical = `${origin}${base}${canonicalPath}`;
       $('link[rel="canonical"]').remove();
       $('<link rel="canonical">').attr('href', canonical).appendTo('head');
-      urls.push(canonical);
       const match = canonicalPath.match(
         /^book\/([^/]+)\/(en|zh-CN)\/([^/]+)\.html$/,
       );
@@ -115,17 +117,40 @@ export async function buildSiteSeo(dist: string, base: string) {
     }
     await writeFile(file, $.html());
   }
-  await writeFile(
-    resolve(dist, 'sitemap.xml'),
-    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[
-      ...new Set(urls),
-    ]
-      .sort()
-      .map((url) => `  <url><loc>${url}</loc></url>`)
-      .join('\n')}\n</urlset>\n`,
-  );
+  await mergeSitemaps(dist, base, sitemaps);
   await writeFile(
     resolve(dist, 'robots.txt'),
     `User-agent: *\nAllow: /\n\nSitemap: ${origin}${base}sitemap.xml\n`,
   );
+}
+
+async function mergeSitemaps(dist: string, base: string, files: string[]) {
+  const [first] = files;
+  if (!first) throw new Error('Missing mdbook-sitemap output');
+  // Chapter discovery and XML generation belong to mdbook-sitemap. Merge its
+  // documents with the landing pages, retaining the existing canonical paths.
+  const merged = load(await readFile(first, 'utf8'), { xml: true });
+  merged('urlset').empty();
+  for (const file of files) {
+    const sitemap = load(await readFile(file, 'utf8'), { xml: true });
+    sitemap('loc').each((_, element) => {
+      const location = sitemap(element);
+      location.text(location.text().replace(/index\.html$/, ''));
+    });
+    await writeFile(file, sitemap.xml());
+    merged('urlset').append(sitemap('url').toArray());
+  }
+  for (const path of ['', 'en/']) {
+    const entry = merged('<url><loc/></url>');
+    entry.find('loc').text(`${origin}${base}${path}`);
+    merged('urlset').append(entry);
+  }
+  const seen = new Set<string>();
+  merged('url').each((_, element) => {
+    const entry = merged(element);
+    const url = entry.find('loc').text();
+    if (seen.has(url)) entry.remove();
+    else seen.add(url);
+  });
+  await writeFile(resolve(dist, 'sitemap.xml'), merged.xml());
 }
