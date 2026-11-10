@@ -6,6 +6,7 @@ import { build } from 'vite';
 import type { Language } from '../src/i18n/resources';
 import { buildBookNavigation } from './books';
 import { buildLandingLocales } from './prerender';
+import { buildSiteSeo } from './seo';
 import { siteConfig } from './settings';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
@@ -65,3 +66,4 @@ for (const [book, languages] of Object.entries(books)) {
     );
   }
 }
+await buildSiteSeo(resolve(root, 'dist'), base);
