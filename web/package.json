@@ -29,7 +29,7 @@
     "react-i18next": "18.0.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.6",
+    "@biomejs/biome": "2.6.8",
     "@testing-library/react": "16.3.3",
     "@testing-library/user-event": "14.6.9",
     "@types/node": "26.6.6",
