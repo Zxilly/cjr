@@ -7,7 +7,7 @@ description = "Run Cangjie binaries with their exact official runtime"
 
 [dependencies]
 backon = { version = "=1.6.0", default-features = false, features = ["std-blocking-sleep"] }
-walkdir = "=2.5.0"
+walkdir = "=2.5.1"
 hex = "=0.4.3"
 clap = { version = "=4.6.8", features = ["derive"] }
 object = { version = "=0.41.0", default-features = false, features = ["read", "std"] }
